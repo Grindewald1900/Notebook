@@ -1,4 +1,7 @@
 # Machine Learning
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="Image/Machine Learning.jpg" alt="Logo" width="720" height="360">
+</a></p>
 
 <!-- TABLE OF CONTENTS -->
 
