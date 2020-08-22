@@ -7,7 +7,7 @@
 
 ## Table of Contents
 * [1. Introduction of Deep Learning](#introduction_of_Deep_Learning)
-* [2. Python](#python)  
+* [2. Tips for Training DNN](#tips_for_Training_DNN)  
  &nbsp;&nbsp;&nbsp;&nbsp;  [2. Virtual Environment](#virtual_environment)  
 
 
@@ -70,7 +70,7 @@ The [softmax function](https://deepai.org/machine-learning-glossary-and-terms/so
 </a></p>
 
 <p align="center"><a href="https://github.com/Grindewald1900/Notebook">
-    <img src="/Image/Machine Learning/.png" alt="Logo" width="720" height="480">
+    <img src="/Image/Machine Learning/8.png" alt="Logo" width="720" height="480">
 </a></p>
 
 * **Backpropagation**
@@ -81,3 +81,10 @@ It is also an efficient way to compute 𝜕𝐿 /𝜕𝑤.
 * **1. Define a set of function**  
 * **2. Estimate goodness of function**  
 * **3. Pick the best function**  
+
+
+## Tips_for_Training_DNN
+
+### Keras
+[Keras](https://keras.io/getting_started/) is a deep learning API written in Python, running on top of the machine learning platform TensorFlow. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result as fast as possible is key to doing good research.  
+
