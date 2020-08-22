@@ -5,11 +5,10 @@ https://www.tensorflow.org/install/pip?hl=zh-cn
 
 
 ### 2. Keras
+https://keras.io/guides/
 https://blog.csdn.net/ghw15221836342/article/details/79497346
 
 ### 3.opencv(optional)
-
-
 
 
 ### 4.Numpy
