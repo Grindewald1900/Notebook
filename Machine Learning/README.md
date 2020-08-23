@@ -77,6 +77,11 @@ The [softmax function](https://deepai.org/machine-learning-glossary-and-terms/so
 In machine learning, [backpropagation](https://en.wikipedia.org/wiki/Backpropagation) is a widely used algorithm in training feedforward neural networks for supervised learning.  
 It is also an efficient way to compute 𝜕𝐿 /𝜕𝑤.
 
+* **Underfitting & Overfitting**
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/12.png" alt="Logo" width="720" height="480">
+</a></p>
+
 ### Three Steps for Deep Learning   
 * **1. Define a set of function**  
 * **2. Estimate goodness of function**  
@@ -87,4 +92,36 @@ It is also an efficient way to compute 𝜕𝐿 /𝜕𝑤.
 
 ### Keras
 [Keras](https://keras.io/getting_started/) is a deep learning API written in Python, running on top of the machine learning platform TensorFlow. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result as fast as possible is key to doing good research.  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/11.png" alt="Logo" width="720" height="480">
+</a></p> 
+ 
+### Tips for Deep Learning
+* **Choosing proper loss**  
+When using softmax output layer, choose 'cross entropy'
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/13.png" alt="Logo" width="720" height="480">
+</a></p>
+
+### Mini-batch
+[Mini-batch](https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/) 
+gradient descent is a variation of the gradient descent algorithm that splits the training dataset into small batches that are used to calculate model error and update model coefficients.  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/14.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/15.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+### New activation function
+
+### Adaptive Learning Rate
+
+
+### Momentum
+
 
