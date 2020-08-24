@@ -105,7 +105,7 @@ When using softmax output layer, choose 'cross entropy'
     <img src="/Image/Machine Learning/13.png" alt="Logo" width="720" height="480">
 </a></p>
 
-### Mini-batch
+* **Mini-batch**
 [Mini-batch](https://machinelearningmastery.com/gentle-introduction-mini-batch-gradient-descent-configure-batch-size/) 
 gradient descent is a variation of the gradient descent algorithm that splits the training dataset into small batches that are used to calculate model error and update model coefficients.  
 
@@ -117,11 +117,36 @@ gradient descent is a variation of the gradient descent algorithm that splits th
     <img src="/Image/Machine Learning/15.png" alt="Logo" width="720" height="480">
 </a></p>  
 
-### New activation function
+* **New activation function**   
 
-### Adaptive Learning Rate
+**[Why do we use an activation function?](https://blog.csdn.net/Leo_Xu06/article/details/53708647)**    
+We understand that using an activation function introduces an additional step at each layer during the forward propagation. Now the question is – if the activation function increases the complexity so much, can we do without an activation function?
+
+Imagine a neural network without the activation functions. In that case, every neuron will only be performing a linear transformation on the inputs using the weights and biases. Although linear transformations make the neural network simpler, but this network would be less powerful and will not be able to learn the complex patterns from the data.
+
+`A neural network without an activation function is essentially just a linear regression model.`
+
+Thus we use a non linear transformation to the inputs of the neuron and this non-linearity in the network is introduced by an activation function.
+
+In the next section we will look at the different types of Activation Functions, their mathematical equations, graphical representation and python codes.
+&nbsp;&nbsp;&nbsp;&nbsp;  
+
+**Different kind of activation functions**  
+`Binary Step`  
+`Linear`  
+`Sigmoid`  Used in hiden layers output   
+`[Maxout](https://blog.csdn.net/hjimce/article/details/50414467)`  Activation function in maxout network can be any piecewise linear convex function, How many pieces depending on how many elements in a group.  
+`[ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks))`  ReLU is a special case of Maxout, which is used in hiden layers output  
+`Softmax`  used in classification layer  
 
 
-### Momentum
+* **Adaptive Learning Rate**
+Popular & Simple Idea: Reduce the learning rate by some factor every few epochs.  
+• At the beginning, we are far from the destination, so we use larger learning rate.  
+• After several epochs, we are close to the destination, so we reduce the learning rate.  
+
+* **[Adagrad](https://www.jiqizhixin.com/graph/technologies/7eab38a3-23ec-494c-a677-415b6f85e6c5)**
+
+* **Momentum**
 
 
