@@ -135,8 +135,8 @@ In the next section we will look at the different types of Activation Functions,
 `Binary Step`  
 `Linear`  
 `Sigmoid`  Used in hiden layers output   
-`[Maxout](https://blog.csdn.net/hjimce/article/details/50414467)`  Activation function in maxout network can be any piecewise linear convex function, How many pieces depending on how many elements in a group.  
-`[ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks))`  ReLU is a special case of Maxout, which is used in hiden layers output  
+[`Maxout`](https://blog.csdn.net/hjimce/article/details/50414467)  Activation function in maxout network can be any piecewise linear convex function, How many pieces depending on how many elements in a group.  
+[`ReLU`](https://en.wikipedia.org/wiki/Rectifier_(neural_networks))  ReLU is a special case of Maxout, which is used in hiden layers output  
 `Softmax`  used in classification layer  
 
 
@@ -148,5 +148,18 @@ Popular & Simple Idea: Reduce the learning rate by some factor every few epochs.
 * **[Adagrad](https://www.jiqizhixin.com/graph/technologies/7eab38a3-23ec-494c-a677-415b6f85e6c5)**
 
 * **Momentum**
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/16.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+### Recipe of Deep Learning(when result on testing data not satisfying)
+* **Overfitting**  solution： Have more training data  
+* **Early Stopping**   
+* **Weight Decay** Our brain prunes out the useless link between neurons. Doing the same thing to machine’s brain improves the performance.  
+http://keras.io/regularizers/
+
+
+
+
 
 
