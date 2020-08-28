@@ -13,7 +13,7 @@
 
 
 <!-- Introduction of Deep Learning -->
-## Introduction_of_Deep_Learning
+## 1-Introduction_of_Deep_Learning
 
 ### Some definations
 * **Neuron**  
@@ -88,7 +88,7 @@ It is also an efficient way to compute 𝜕𝐿 /𝜕𝑤.
 * **3. Pick the best function**  
 
 
-## Tips_for_Training_DNN
+## 2-Tips_for_Training_DNN
 
 ### Keras
 [Keras](https://keras.io/getting_started/) is a deep learning API written in Python, running on top of the machine learning platform TensorFlow. It was developed with a focus on enabling fast experimentation. Being able to go from idea to result as fast as possible is key to doing good research.  
@@ -157,6 +157,52 @@ Popular & Simple Idea: Reduce the learning rate by some factor every few epochs.
 * **Early Stopping**   
 * **Weight Decay** Our brain prunes out the useless link between neurons. Doing the same thing to machine’s brain improves the performance.  
 http://keras.io/regularizers/
+* **Dropout** Each time before updating the parameters, Each neuron has p% to dropout
+* **Network Structure** 
+
+
+## 3-Variants of Neural Networks
+### Convolutional Neural Network (CNN)
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/17.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/18.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/19.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/20.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/21.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/22.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/23.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/24.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/25.png" alt="Logo" width="720" height="480">
+</a></p>  
+
+### Recurrent Neural Network (RNN)
+
+
+
 
 
 
