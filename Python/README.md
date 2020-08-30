@@ -14,13 +14,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/Grindewald1900/Notebook">
-    <img src="Image/Python/Python.jpg" alt="Logo" width="720" height="360">
+    <img src="/Image/Python/Python.jpg" alt="Logo" width="720" height="360">
   </a>
 
   <h3 align="center">Notebook</h3>
 
   <p align="center">
-    A notebook with respect to [theme]
+    A notebook with respect to Python
     <br />
     <a href="[Link]"><strong>Explore the docs »</strong></a>
     <br />
