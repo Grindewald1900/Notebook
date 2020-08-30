@@ -200,7 +200,12 @@ http://keras.io/regularizers/
 </a></p>  
 
 ### Recurrent Neural Network (RNN)
+* **The output of hidden layer are stored in the memory.**  
+* **Memory can be considered as another input.**  
 
+<p align="center"><a href="https://github.com/Grindewald1900/Notebook">
+    <img src="/Image/Machine Learning/26.png" alt="Logo" width="720" height="480">
+</a></p>  
 
 
 
