@@ -6,16 +6,26 @@
 <!-- TABLE OF CONTENTS -->
 
 ## Table of Contents
-* [1. Introduction of Deep Learning](#introduction_of_Deep_Learning)
-* [2. Tips for Training DNN](#tips_for_Training_DNN)  
- &nbsp;&nbsp;&nbsp;&nbsp;  [2. Virtual Environment](#virtual_environment)  
+* [1. Introduction of Deep Learning](introduction_of_Deep_Learning)  
+ &nbsp;&nbsp;&nbsp;&nbsp;  [1.1 Some definations](some_definations)  
+ &nbsp;&nbsp;&nbsp;&nbsp;  [1.2 Three Steps for Deep Learning](three_Steps_for_Deep_Learning )  
+ 
+* [2. Tips for Training DNN](#2-tips_for_Training_DNN)  
+ &nbsp;&nbsp;&nbsp;&nbsp;  [2.1  Keras](keras)  
+ &nbsp;&nbsp;&nbsp;&nbsp;  [2.2  Tips_for_Deep Learning](tips_for_Deep_Learning)  
+  
+* [3. 3-Variants_of_Neural_Networks](#3-Variants_of_Neural_Networks)  
+ &nbsp;&nbsp;&nbsp;&nbsp;  [2.1  Convolutional_Neural_Network_(CNN)](Convolutional_Neural_Network_(CNN))  
+ &nbsp;&nbsp;&nbsp;&nbsp;  [2.1  Recurrent_Neural_Network_(RNN)](Recurrent_Neural_Network_(RNN))  
+
+ 
 
 
 
 <!-- Introduction of Deep Learning -->
 ## 1-Introduction_of_Deep_Learning
 
-### Some definations
+### Some_definations
 * **Neuron**  
 <p align="center"><a href="https://github.com/Grindewald1900/Notebook">
     <img src="/Image/Machine Learning/1.png" alt="Logo" width="720" height="480">
@@ -82,10 +92,15 @@ It is also an efficient way to compute 𝜕𝐿 /𝜕𝑤.
     <img src="/Image/Machine Learning/12.png" alt="Logo" width="720" height="480">
 </a></p>
 
-### Three Steps for Deep Learning   
+### Three_Steps_for_Deep_Learning   
 * **1. Define a set of function**  
 * **2. Estimate goodness of function**  
 * **3. Pick the best function**  
+
+
+
+
+
 
 
 ## 2-Tips_for_Training_DNN
@@ -97,7 +112,7 @@ It is also an efficient way to compute 𝜕𝐿 /𝜕𝑤.
     <img src="/Image/Machine Learning/11.png" alt="Logo" width="720" height="480">
 </a></p> 
  
-### Tips for Deep Learning
+### Tips_for_Deep_Learning
 * **Choosing proper loss**  
 When using softmax output layer, choose 'cross entropy'
 
@@ -161,8 +176,8 @@ http://keras.io/regularizers/
 * **Network Structure** 
 
 
-## 3-Variants of Neural Networks
-### Convolutional Neural Network (CNN)
+## 3-Variants_of_Neural_Networks
+### Convolutional_Neural_Network_(CNN)
 <p align="center"><a href="https://github.com/Grindewald1900/Notebook">
     <img src="/Image/Machine Learning/17.png" alt="Logo" width="720" height="480">
 </a></p>  
@@ -199,7 +214,7 @@ http://keras.io/regularizers/
     <img src="/Image/Machine Learning/25.png" alt="Logo" width="720" height="480">
 </a></p>  
 
-### Recurrent Neural Network (RNN)
+### Recurrent_Neural_Network_(RNN)
 * **The output of hidden layer are stored in the memory.**  
 * **Memory can be considered as another input.**  
 
