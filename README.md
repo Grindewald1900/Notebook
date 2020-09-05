@@ -1,9 +1,20 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+<p align="left">
+    <a href="https://github.com/Grindewald1900/Notebook/graphs/contributors" alt="Contributors">
+        <img src="https://img.shields.io/github/contributors/Grindewald1900/Notebook" /></a>
+    <a href="https://github.com/Grindewald1900/Notebook/pulse" alt="Activity">
+        <img src="https://img.shields.io/github/commit-activity/m/Grindewald1900/Notebook" /></a>
+    <a href="https://circleci.com/gh/Grindewald1900/Notebook/tree/master">
+        <img src="https://img.shields.io/circleci/project/github/Grindewald1900/Notebook/master" alt="build status"></a>
+    <a href="https://coveralls.io/github/Grindewald1900/Notebook">
+        <img src="https://img.shields.io/coveralls/github/Grindewald1900/Notebook"
+            alt="coverage"></a>
+    <a href="https://github.com/Grindewald1900/Notebook/blob/master/LICENSE.txt">
+        <img src="https://img.shields.io/badge/license-MIT-green"
+            /></a>
+    <a href="https://www.linkedin.com/in/yee-ren-8b63a21a2/">
+        <img src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555"
+            /></a>
+</p>
 
 
 
