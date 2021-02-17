@@ -110,6 +110,49 @@ Also you can add me as friend on Wechat.
 4. Build underwater background  
 5. Add music  
 
+`Fish1`  
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/3.png?raw=true" width="30%" height="30%"></div>  <br></br>
+
+`Fish2`  
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/2.png?raw=true" width="30%" height="30%"></div>  <br></br>
+
+
+## Lesson 2 Tom and Jerry
+
+### Key points:
+
+* 1. Button clicked (按钮被点击)  
+* 2. Point in...direction (面向...方向)  
+* 3. Point towards... (面向...物体)  
+* 4. Glide...seconds to...(在...秒时间内移动到...) 
+
+### Steps:
+`Mouse2-Mouse5`, `Cat`  
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/1.png?raw=true" width="30%" height="30%"></div>  <br></br>
+
+`Mouse1`  
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/2.png?raw=true" width="30%" height="30%"></div>  <br></br>
+
+
+## Lesson 3 Greedy beetles
+
+### Key points:
+
+* 1. Go to [random position] (移动到随机位置)
+* 2. Touching...(侦测,触碰到...) 
+* 3. Change [color efect] by... (将颜色特效增加...) 
+* 4. Change size by...(将尺寸调整为...) 
+* 5. Say...(说...)
+* 
+### Steps:
+`Beetle`  
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/7.png?raw=true" width="30%" height="30%"></div>  <br></br>
+
+`Bread`  
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/8.png?raw=true" width="30%" height="30%"></div>  <br></br>
+
+
+
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
