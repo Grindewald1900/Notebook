@@ -35,11 +35,13 @@
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-*   [About The Project](#About-The-Project)
-*   [Getting Started](#Getting-Started)
-*   [Prerequisites](#Prerequisites)
-*   [About me](#About-me)
-*   [Lesson-1-Underwater-World](#Lesson-1-Underwater-World)
+*   [About The Project](About-The-Project)
+*   [Getting Started](Getting-Started)
+*   [Prerequisites](Prerequisites)
+*   [About me](About-me)
+*   [Lesson 1 Underwater World](Lesson-1-Underwater-World)
+
+
 
 
 
@@ -150,6 +152,114 @@ Also you can add me as friend on Wechat.
 
 `Bread`  
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/8.png?raw=true" width="30%" height="30%"></div>  <br></br>
+
+## Lesson 4 Dinosaurs world
+
+### Key points:
+
+* 1. Move...
+* 2. If on edge, bounce
+* 3. Button clicked 
+* 4. Point in...direction
+
+
+### Steps:
+1. Build dinosaurs 
+2. Make it move (with edge detection)   
+3. Make some of them move with keyboard(controller)
+
+## Lesson 5 Hunting sharks
+
+### Key points:
+
+* 1. Move...
+* 2. If on edge, bounce
+* 3. Button clicked 
+* 4. Point in...direction
+
+
+### Steps:
+1. Build dinosaurs 
+2. Make it move (with edge detection)   
+3. Make some of them move with keyboard(controller)
+
+
+## Lesson 6 Kitty's adventure
+
+### Key points:
+
+* 1. Controller
+* 2. If...then...
+* 3. Touching color...
+
+
+
+### Steps:
+1. Build roads 
+2. Make Kitty move  
+3. Detect the edge of road
+4. Detect the destination
+
+`Cat`
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/9.png?raw=true" width="30%" height="30%"></div>  <br></br>
+
+
+
+## Lesson 7 Reading the Mind 
+
+### Key points:
+
+* 1. Wait for input
+* 2. If...then...else
+
+
+
+### Steps:
+`ghost`
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/10.png?raw=true" width="50%" height="50%"></div>  <br></br>
+
+
+## Lesson 8 Meteor showers
+
+### Key points:
+
+* 1. Customized block(自制积木)
+
+
+### Steps:
+* 1. Build shining stars
+* 2. Build moving stars
+`shining stars`
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/12.png?raw=true" width="60%" height="60%"></div>  <br></br>
+
+`moving stars`
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/13.png?raw=true" width="80%" height="80%"></div>  <br></br>
+
+
+## Lesson 9 Flowers
+
+### Key points:
+
+* 1. Paint module(绘制模型)
+* 2. Draw your sprite(画角色)
+
+
+### Steps:
+* 1. Build petals 
+* 2. Import Paint module
+* 3. Rotate the petal
+* 
+`shining stars`
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/11.png?raw=true" width="50%" height="50%"></div>  <br></br>
+
+
+
+
+
+
+
+
+
 
 
 
