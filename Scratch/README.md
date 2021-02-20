@@ -249,8 +249,7 @@ Also you can add me as friend on Wechat.
 * 2. Import Paint module
 * 3. Rotate the petal
 * 
-`shining stars`
-<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/11.png?raw=true" width="50%" height="50%"></div>  <br></br>
+
 
 
 
