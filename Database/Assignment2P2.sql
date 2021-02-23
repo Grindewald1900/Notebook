@@ -17,6 +17,7 @@ WHERE dept_name = 'Comp. Sci.' AND credits = 3;
 
 
 /* Q2 */
+/* Attention: name modified */
 -- Since take.ID is a foreign key from table 'student'
 SELECT takes.ID FROM takes
 WHERE takes.course_id IN (
@@ -61,6 +62,7 @@ WHERE year = 2009 AND semester = 'Fall' AND section.course_id = (SELECT course_i
 	
 	
 /* Q8 */
+/* Attention: ID modified */							  
 SELECT SUM(credits*points) FROM public.takes
 LEFT JOIN public.course ON takes.course_id = course.course_id
 LEFT JOIN public.points ON takes.grade = points.grade
@@ -69,6 +71,7 @@ WHERE takes.ID = '66054';
 
 
 /* Q9 */
+/* Attention: ID modified */								  
 SELECT CAST(SUM(credits*points)/SUM(credits) AS DECIMAL(10,2))FROM public.takes
 LEFT JOIN public.course ON takes.course_id = course.course_id
 LEFT JOIN public.points ON takes.grade = points.grade
@@ -92,6 +95,7 @@ WHERE dept_name = 'Comp. Sci.';
 
 
 /* Q12 */
+/* Attention: DISABLE or DROP the CONSTRAINT before  DELETE*/								  
 ALTER TABLE prereq
 DISABLE CONSTRAINT  prereq_prereq_id_fkey;
 
@@ -103,6 +107,7 @@ ENABLE CONSTRAINT  prereq_prereq_id_fkey;
 
 
 /* Q13 */
+/* Attention: DISABLE or DROP the CONSTRAINT before  INSERT*/
 ALTER TABLE instructor
 DROP CONSTRAINT instructor_salary_check;
 
