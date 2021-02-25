@@ -41,9 +41,9 @@ WHERE instructor.id IN (SELECT id FROM instructor WHERE salary = (SELECT MAX(sal
 
 
 /* Q5 */
-SELECT * FROM public.takes
-WHERE semester = 'Fall' AND year = 2009;
--- WHERE takes.course_id IN (SELECT course_id FROM public.section WHERE semester = 'Fall' AND year = 2009)
+SELECT course_id, COUNT(course_id) FROM public.takes
+WHERE semester = 'Fall' AND year = 2009
+GROUP BY course_id, sec_id;
 
 
 /* Q6 */
@@ -111,11 +111,12 @@ ENABLE CONSTRAINT  prereq_prereq_id_fkey;
 ALTER TABLE instructor
 DROP CONSTRAINT instructor_salary_check;
 
-INSERT INTO public.instructor (id, name, dept_name, salary)
-SELECT student.ID, student.name, student.dept_name, 10000 FROM student WHERE student.tot_cred > 100;
+SELECT student.ID, student.name, student.dept_name, 10000 
+FROM student WHERE student.tot_cred > 100 AND student.id NOT IN (SELECT id FROM instructor);
 
--- ALTER TABLE instructor
--- ADD CONSTRAINT instructor_salary_check check(salary > 29000);
+ALTER TABLE instructor
+ADD CONSTRAINT instructor_salary_check check(salary > 29000);
+
 
 
 
