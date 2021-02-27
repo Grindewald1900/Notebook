@@ -215,8 +215,13 @@ Also you can add me as friend on Wechat.
 
 
 ### Steps:
-`ghost`
+`ghost version 1.0`
+
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/10.png?raw=true" width="50%" height="50%"></div>  <br></br>
+
+
+`ghost version 2.0`
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/14.png?raw=true" width="50%" height="50%"></div>  <br></br>
 
 
 ## Lesson 8 Meteor showers
