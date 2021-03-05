@@ -253,7 +253,9 @@ Also you can add me as friend on Wechat.
 * 1. Build petals 
 * 2. Import Paint module
 * 3. Rotate the petal
-* 
+
+`flowers`
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/11.png?raw=true" width="60%" height="60%"></div>  <br></br>
 
 
 
