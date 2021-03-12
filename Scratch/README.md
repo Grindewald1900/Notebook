@@ -49,6 +49,7 @@
 *   [Lesson 8 Meteor showers](#Lesson8)
 *   [Lesson 9 Flowers](#Lesson9)
 *   [Lesson 9.5 Review](#Lesson95)
+*   [Lesson 10 Trampoline game](#Lesson10)
 
 
 
@@ -311,6 +312,26 @@ Also you can add me as friend on Wechat.
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/if0.png?raw=true" width="80%" height="80%"</div>  <br></br>
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/if1.png?raw=true" width="50%" height="50%"</div>  <br></br>
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/if2.png?raw=true" width="50%" height="50%"</div>  <br></br>
+
+
+
+<a name="Lesson10"></a>
+## Lesson 10 Trampoline game
+
+### Key points:
+
+* 1. 重复执行
+* 2. 坐标增加（减少）
+* 3. 条件（如果那么）
+* 4. 侦测（蹦床碰到小女孩）
+* 5. 变换造型
+
+### Steps:
+* 1. 搭建背景，人物（Ballerina），床（Trampoline）  10min
+* 2. 小女孩上下运动  10min
+* 3. 蹦床碰到小女孩，改变形状  15min
+* 4. 音乐 5min
+
 
 
 ### Basic key blocks
