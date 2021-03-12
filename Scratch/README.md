@@ -35,22 +35,20 @@
 
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
-*   [About The Project](About-The-Project)
-*   [Getting Started](Getting-Started)
-*   [Prerequisites](Prerequisites)
+*   [About The Project](#AboutTheProject)
+*   [Getting Started](#GettingStarted)
+*   [Prerequisites](#Prerequisites)
 *   [About me](#Aboutme)
-*   [Lesson 1 Underwater World](Lesson-1-Underwater-World)
-*   [Lesson 2 Tom and Jerry](Lesson-2-Tom-and-Jerry)
-*   [Lesson 3 Greedy beetles](Lesson-3-Greedy-beetles)
-*   [Lesson 5 Hunting sharks](Lesson-5 Hunting-sharks)
-*   [Lesson 6 Kitty's adventure](Lesson-6-Kitty's-adventure)
-*   [Lesson 7 Reading the Mind](Lesson-7-Reading-the-Mind)
-*   [Lesson 8 Meteor showers](Lesson-8-Meteor-showers)
-*   [Lesson 9 Flowers](Lesson-9-Flowers)
-*   []()
-*   []()
-*   []()
-
+*   [Lesson 1 Underwater World](#Lesson1)
+*   [Lesson 2 Tom and Jerry](#Lesson2)
+*   [Lesson 3 Greedy beetles](#Lesson3)
+*   [Lesson 4 Dinosaurs world](#Lesson4)
+*   [Lesson 5 Hunting sharks](#Lesson5)
+*   [Lesson 6 Kitty's adventure](#Lesson6)
+*   [Lesson 7 Reading the Mind](#Lesson7)
+*   [Lesson 8 Meteor showers](#Lesson8)
+*   [Lesson 9 Flowers](#Lesson9)
+*   [Lesson 9.5 Review](#Lesson95)
 
 
 
@@ -59,12 +57,14 @@
 
 
 <!-- ABOUT THE PROJECT -->
+<a name=""></a>
 ## About The Project
 Some lesson notes prepared for Scratch lessons.  
 
 
 
 <!-- GETTING STARTED -->
+<a name="GettingStarted"></a>
 ## Getting Started
 Here's some entries to our platforms:
 * **[Coding Platform(编程平台)](https://cloud.magaoedu.com/static/build/index.html)**  
@@ -75,7 +75,7 @@ Here's some entries to our platforms:
 
 
 
-
+<a name="Prerequisites"></a>
 ### Prerequisites
 * Setup your `account` to [magaoedu](https://cloud.magaoedu.com/)    
 * PC Laptop or Tablet with `camera` and `mircophone`  
@@ -90,8 +90,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 
 <!-- About me -->
-## About me
 <a name="Aboutme"></a>
+## About me
 
 My name is  [Yi Ren](https://github.com/Grindewald1900), or just call me Yee.   
 Here's my email [grindewald1504@gmail.com](grindewald1504@gmail.com).  
@@ -100,7 +100,7 @@ Also you can add me as friend on Wechat.
 <img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/QR.jpg?raw=true" width="300" height="350">
 
 
-
+<a name="Lesson1"></a>
 ## Lesson 1 Underwater World
 
 ### Key points:
@@ -129,6 +129,8 @@ Also you can add me as friend on Wechat.
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/2.png?raw=true" width="30%" height="30%"></div>  <br></br>
 
 
+
+<a name="Lesson2"></a>
 ## Lesson 2 Tom and Jerry
 
 ### Key points:
@@ -146,6 +148,8 @@ Also you can add me as friend on Wechat.
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/2.png?raw=true" width="30%" height="30%"></div>  <br></br>
 
 
+
+<a name="Lesson3"></a>
 ## Lesson 3 Greedy beetles
 
 ### Key points:
@@ -163,6 +167,8 @@ Also you can add me as friend on Wechat.
 `Bread`  
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/8.png?raw=true" width="30%" height="30%"></div>  <br></br>
 
+
+<a name="Lesson4"></a>
 ## Lesson 4 Dinosaurs world
 
 ### Key points:
@@ -178,6 +184,10 @@ Also you can add me as friend on Wechat.
 2. Make it move (with edge detection)   
 3. Make some of them move with keyboard(controller)
 
+
+
+
+<a name="Lesson5"></a>
 ## Lesson 5 Hunting sharks
 
 ### Key points:
@@ -194,6 +204,8 @@ Also you can add me as friend on Wechat.
 3. Make some of them move with keyboard(controller)
 
 
+
+<a name="Lesson6"></a>
 ## Lesson 6 Kitty's adventure
 
 ### Key points:
@@ -215,6 +227,7 @@ Also you can add me as friend on Wechat.
 
 
 
+<a name="Lesson7"></a>
 ## Lesson 7 Reading the Mind 
 
 ### Key points:
@@ -234,6 +247,8 @@ Also you can add me as friend on Wechat.
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/14.png?raw=true" width="50%" height="50%"></div>  <br></br>
 
 
+
+<a name="Lesson8"></a>
 ## Lesson 8 Meteor showers
 
 ### Key points:
@@ -251,6 +266,8 @@ Also you can add me as friend on Wechat.
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/13.png?raw=true" width="80%" height="80%"></div>  <br></br>
 
 
+
+<a name="Lesson9"></a>
 ## Lesson 9 Flowers
 
 ### Key points:
@@ -267,7 +284,10 @@ Also you can add me as friend on Wechat.
 `flowers`
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/11.png?raw=true" width="60%" height="60%"></div>  <br></br>
 
+<a name=""></a>
 
+
+<a name="Lesson95"></a>
 ## Lesson 9.5 Review
 
 ### Basic concepts
