@@ -38,7 +38,7 @@
 *   [About The Project](About-The-Project)
 *   [Getting Started](Getting-Started)
 *   [Prerequisites](Prerequisites)
-*   [About me](About-me)
+*   [About me](#Aboutme)
 *   [Lesson 1 Underwater World](Lesson-1-Underwater-World)
 *   [Lesson 2 Tom and Jerry](Lesson-2-Tom-and-Jerry)
 *   [Lesson 3 Greedy beetles](Lesson-3-Greedy-beetles)
@@ -61,7 +61,6 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 Some lesson notes prepared for Scratch lessons.  
-* Lesson 1: Underwater World (海底世界)  
 
 
 
@@ -92,6 +91,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- About me -->
 ## About me
+<a name="Aboutme"></a>
 
 My name is  [Yi Ren](https://github.com/Grindewald1900), or just call me Yee.   
 Here's my email [grindewald1504@gmail.com](grindewald1504@gmail.com).  
