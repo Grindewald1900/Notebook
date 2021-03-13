@@ -336,6 +336,11 @@ Also you can add me as friend on Wechat.
 * 3. 蹦床碰到小女孩，改变形状  15min
 * 4. 音乐 5min
 
+`Girl`
+<div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/10-2.png?raw=true" width="40%" height="40%"</div>  <br></br>
+
+`trampoline`
+<div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/10-1.png?raw=true" width="40%" height="40%"</div>  <br></br>
 
 
 ### Basic key blocks
