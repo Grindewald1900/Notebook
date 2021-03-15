@@ -15,6 +15,147 @@ require reading about File Structures, Indexing, and Hashing.
 -------------------------------
 
 ### Problem 1
+* **1. Find the names of all students who have taken at least one Comp. Sci. course; make sure there are no duplicate names in the result.**
+```SQL
+/*Question 1: */
+select distinct student.name from student
+where student.id in (
+	select distinct takes.id from takes
+	where takes.course_id in(
+		select course.course_id from course
+		where course.dept_name like 'Comp. Sci.'));
+```
+
+* **2. Find the IDs and names of all students who have not taken any course offering before Spring 2009.**
+```SQL
+/* Question 2: */
+select distinct student.id, student.name from student
+where student.id in(
+	select takes.id from takes
+	where takes.year <= 2009 and takes.semester != 'Spring');
+```
+* **3. For each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.**
+```SQL
+/* Question 3: */
+select instructor.dept_name, max(instructor.salary) from instructor
+group by instructor.dept_name;
+```
+
+* **4. Find the lowest, across all departments, of the per-department maximum salary computed by the preceding query.**
+```SQL
+/* Question 4: */
+select instructor.dept_name, max(instructor.salary) from instructor
+group by instructor.dept_name
+order by max(instructor.salary) asc limit 1;
+```
+
+* **5. Create a new course “CS-001”, titled “Weekly Seminar”,with 0 credits.**
+```SQL
+/* Question 5: 0 credit couldn't be inserted since the constraints*/
+/* Unless we DISABLE or DROP the CONSTRAINT*/
+insert into course values ('CS-001','Weekly Seminar',null,1);
+```
+
+* **6. Create a section of this course in Autumn 2009, with sec id of 1.**
+```SQL
+/* Question 6: */
+insert into public.section values('CS-001', '1', 'Fall', '2009',null,null,null);
+```
+
+* **7. Enroll every student in the Comp. Sci. department in the above section.**
+```SQL
+/* Question 7 : */
+Insert into takes(id,course_id,sec_id,semester,year)
+Select id,'CS-001','1','Fall',2009 From student
+where dept_name like 'Comp. Sci.';
+```
+
+* **8. Delete enrollments in the above section where the student’s name is Chavez.**
+```SQL
+/* Question 8: */
+Delete from takes 
+Where course_id ='CS-001' and sec_id = '1' and semester='Fall' and year =2009
+and id in(
+	select id from student
+	where name='%Chavez%');
+```
+
+* **9. Delete the course CS-001. What will happen if you run this delete statement without first deleting offerings (sections) of this course?**
+```SQL
+/* Question 9: */
+delete from course
+where course_id  = 'CS-001';
+```
+
+* **10. Delete all takes tuples corresponding to any section of any course with the word “database” as a part of the title; ignore case when matching the word with the title.**
+```SQL
+/* Question 10: */
+delete from section
+where course_id in (
+	select course_id from course
+	where lower(title) like '%database%'
+);
+```
+
+* **11. Suppose that we have a relation marks(ID, score) and we wish to assign grades to students based on the score as follows: grade F if score < 40, grade C if 40 ≤ score < 60, grade B if 60 ≤ score < 80, and grade A if 80 ≤ score. Write SQL queries to do the following:**
+<pre>  a. Display the grade for each student, based on the marks relation.  </pre>
+```SQL
+/* Question 11-a: */
+SELECT id, score,  
+	CASE 
+		WHEN score < 40 THEN 'F'
+	    WHEN 40 <= score and score < 60 THEN 'C'
+		WHEN 60 <= score and score < 80 THEN 'B'
+		WHEN 80 <= score THEN 'A'
+	END AS grade FROM marks;
+```
+
+
+<pre>  b. Find the number of students with each grade.  </pre>
+For this question, we implemented our query with 2 method: WITH and UPDATE.  
+
+```SQL
+/* Method - 1: WITH*/
+WITH temp_marks AS (
+	SELECT id, score, 
+	CASE 
+		WHEN score < 40 THEN 'F'
+	    WHEN 40 <= score and score < 60 THEN 'C'
+		WHEN 60 <= score and score < 80 THEN 'B'
+		WHEN 80 <= score THEN 'A'
+	END AS grade FROM marks
+)
+SELECT grade, COUNT(grade) FROM temp_marks GROUP BY grade ORDER BY grade;
+
+```
+
+We need to add a new COLUMN or change the type of COLUMN `score` from numeric to varchar before UPDATE.  
+
+```SQL
+/* Method - 2: UPDATE*/
+ALTER TABLE marks
+ADD COLUMN grade VARCHAR;
+UPDATE marks SET grade = 
+CASE
+	    WHEN score < 40 THEN 'F'
+	    WHEN 40 <= score and score < 60 THEN 'C'
+		WHEN 60 <= score and score < 80 THEN 'B'
+		WHEN 80 <= score THEN 'A'
+		END;
+SELECT grade, COUNT(grade) FROM marks GROUP BY grade ORDER BY grade;
+
+```
+* **12. The SQL like operator is case sensitive, but the lower() function on strings can be used to perform case insensitive matching. To show how, write a query that finds departments whose names contain the string “sci” as a substring, regardless of the case.**
+```SQL
+/* QUestion 12: */
+
+select * from department
+where lower(dept_name) like '%sci%';
+```
+
+
+
+
 
 ### Problem 2
 
