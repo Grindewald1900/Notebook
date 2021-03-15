@@ -5,7 +5,7 @@ require reading about File Structures, Indexing, and Hashing.
 
 
 ### Group Members:
-`Yi Ren` (002269013)    `Wentao Lu` (002276355)
+`Yi Ren` *(002269013)*    `Wentao Lu` *(002276355)*     `Junjia Lin` *(002269013)*    `Luyun Nie` *(002268087)*
 
 -------------------------------
 
@@ -119,10 +119,10 @@ For this question, we implemented our query with 2 method: WITH and UPDATE.
 WITH temp_marks AS (
 	SELECT id, score, 
 	CASE 
-		WHEN score < 40 THEN 'F'
+	    WHEN score < 40 THEN 'F'
 	    WHEN 40 <= score and score < 60 THEN 'C'
-		WHEN 60 <= score and score < 80 THEN 'B'
-		WHEN 80 <= score THEN 'A'
+	    WHEN 60 <= score and score < 80 THEN 'B'
+	    WHEN 80 <= score THEN 'A'
 	END AS grade FROM marks
 )
 SELECT grade, COUNT(grade) FROM temp_marks GROUP BY grade ORDER BY grade;
@@ -136,12 +136,12 @@ We need to add a new COLUMN or change the type of COLUMN `score` from numeric to
 ALTER TABLE marks
 ADD COLUMN grade VARCHAR;
 UPDATE marks SET grade = 
-CASE
+	CASE
 	    WHEN score < 40 THEN 'F'
 	    WHEN 40 <= score and score < 60 THEN 'C'
-		WHEN 60 <= score and score < 80 THEN 'B'
-		WHEN 80 <= score THEN 'A'
-		END;
+	    WHEN 60 <= score and score < 80 THEN 'B'
+	    WHEN 80 <= score THEN 'A'
+	    END;
 SELECT grade, COUNT(grade) FROM marks GROUP BY grade ORDER BY grade;
 
 ```
