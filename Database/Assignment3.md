@@ -5,7 +5,7 @@ require reading about File Structures, Indexing, and Hashing.
 
 
 ### Group Members:
-`Yi Ren` *(002269013)*    `Wentao Lu` *(002276355)*     `Junjia Lin` *(002269013)*    `Luyun Nie` *(002268087)*
+`Yi Ren` *(002269013)*    `Wentao Lu` *(002276355)*     `Junjia Lin` *(002268506)*    `Luyun Nie` *(002268087)*
 
 -------------------------------
 
@@ -187,6 +187,11 @@ Reasons:
 4. The file could have different kind or record types.   
 
 Separator characters:  
+To determine the bytes within a particular record that represent each field, we can use special separator characters to terminate variable-length fields.  
+Type 1: Only need a seperating character to seperate different field.  
+Type 2: Need the seperating character at the end of field and also character to seperate multiple values.   
+Type 3: Need the seperating character at the end of field and also character to seperate optional values.   
+Type 4: Need the seperating character at the end of field and also terminate character at the end of records.  
 <div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Database/5.png?raw=true" width="80%" height="80%"></div>  <br></br>
 
 
