@@ -50,6 +50,7 @@
 *   [Lesson 9 Flowers](#Lesson9)
 *   [Lesson 9.5 Review](#Lesson95)
 *   [Lesson 10 Trampoline game](#Lesson10)
+*   [Lesson 10 六边形](#Lesson11)
 
 
 
@@ -343,9 +344,23 @@ Also you can add me as friend on Wechat.
 <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/10-1.png?raw=true" width="40%" height="40%"</div>  <br></br>
 
 
-### Basic key blocks
+<a name="Lesson11"></a>
+## Lesson 11 Trampoline game
 
-* <div><img src="" width="80%" height="80%"</div>  <br></br>
+### Key points:
+* 1.擦除（erase all）
+* 2.落笔（pen down）
+* 3.移动...步（move...steps）
+* 4.旋转...度（turn ... degrees）
+
+### Steps:
+* 1. 画线段（三角形的边）
+* 2. 画三角形（循环Step-1 三次）
+* 3. 画六边形（循环Step-2 六次）
+
+
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/15.png?raw=true" width="60%" height="60%"</div>  <br></br>
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/%E5%85%AD%E8%BE%B9%E5%BD%A2.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
 
 
