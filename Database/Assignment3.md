@@ -30,9 +30,8 @@ where student.id in (
 ```SQL
 /* Question 2: */
 select distinct student.id, student.name from student
-where student.id in(
-	select takes.id from takes
-	where takes.year <= 2009 and takes.semester != 'Spring');
+where student.id not in(
+	select takes.id from takes where takes.year < 2009 );
 ```
 * **3. For each department, find the maximum salary of instructors in that department. You may assume that every department has at least one instructor.**
 ```SQL
@@ -77,10 +76,13 @@ Delete from takes
 Where course_id ='CS-001' and sec_id = '1' and semester='Fall' and year =2009
 and id in(
 	select id from student
-	where name='%Chavez%');
+	where name like '%Chavez%');
 ```
 
-* **9. Delete the course CS-001. What will happen if you run this delete statement without first deleting offerings (sections) of this course?**
+* **9. Delete the course CS-001. What will happen if you run this delete statement without first deleting offerings (sections) of this course?**  
+If we delete the course CS-001 without deleting section of this course, the change would be 
+cascaded to the data related in table 'section' 'prereq' and 'take', since we have `on delete cascade`
+ referential action for the foreign key in the tables mentioned. 
 ```SQL
 /* Question 9: */
 delete from course
