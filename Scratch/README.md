@@ -48,9 +48,11 @@
 *   [Lesson 7 Reading the Mind](#Lesson7)
 *   [Lesson 8 Meteor showers](#Lesson8)
 *   [Lesson 9 Flowers](#Lesson9)
-*   [Lesson 9.5 Review](#Lesson95)
+*   [Lesson 9.5Review(Coordinate)](#Lesson95)
 *   [Lesson 10 Trampoline game](#Lesson10)
-*   [Lesson 10 六边形](#Lesson11)
+*   [Lesson 11 六边形](#Lesson11)
+*   [Lesson 12 正方形](#Lesson12)
+*   [Lesson 12.5  Reviews(Degrees)](#Lesson125)
 
 
 
@@ -290,7 +292,7 @@ Also you can add me as friend on Wechat.
 
 
 <a name="Lesson95"></a>
-## Lesson 9.5 Review
+## Lesson 9.5 Review(Coordinate)
 
 ### Basic concepts
 * **Coordinate(坐标)**
@@ -363,6 +365,29 @@ Also you can add me as friend on Wechat.
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/%E5%85%AD%E8%BE%B9%E5%BD%A2.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
 
+<a name="Lesson12"></a>
+## Lesson 12 Suqares
+
+### Key points:
+* 1.擦除（erase all）
+* 2.落笔（pen down）
+* 3.移动...步（move...steps）
+* 4.改变颜色(Change color)
+* 4.旋转...度（turn ... degrees）
+
+### Steps:
+* 1. 画线段（正方形的边）
+* 2. 改变画笔颜色
+* 2. 画正方形（循环Step-1,2 四次）
+* 3. 改变画笔方向30°（循环Step-1,2,3 12次）
+
+
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/16.png?raw=true" width="60%" height="60%"</div>  <br></br>
+
+
+
+<a name="Lesson125"></a>
+## Lesson 12.5 Reviews(Degrees)
 
 
 
