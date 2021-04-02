@@ -53,6 +53,8 @@
 *   [Lesson 11 六边形](#Lesson11)
 *   [Lesson 12 正方形](#Lesson12)
 *   [Lesson 12.5  Reviews(Degrees)](#Lesson125)
+*   [Lesson 13  Bouncing Ball game](#Lesson13)
+*   
 
 
 
@@ -373,7 +375,7 @@ Also you can add me as friend on Wechat.
 * 2.落笔（pen down）
 * 3.移动...步（move...steps）
 * 4.改变颜色(Change color)
-* 4.旋转...度（turn ... degrees）
+* 5.旋转...度（turn ... degrees）
 
 ### Steps:
 * 1. 画线段（正方形的边）
@@ -391,7 +393,24 @@ Also you can add me as friend on Wechat.
 
 
 
+<a name="Lesson13"></a>
+## Lesson 13 Bouncing Ball game
 
+### Key points:
+* 1.板子，跟随鼠标(go to mouse pointer)
+* 2.小球判断边界(If edge, bounce)
+* 3.小球判断与板子的碰撞(If touching)
+* 4.小球判断是否碰到红色区域(If toucing)
+*
+
+### Steps:
+* 1. 画板子，跟随鼠标移动
+* 2. 选择小球，判断边界
+* 2. 选择小球，如果碰到板子，旋转角度
+* 3. 选择小球，如果碰到红色，结束游戏
+
+
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/17.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
 
 
