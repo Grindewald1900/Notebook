@@ -54,6 +54,7 @@
 *   [Lesson 12 正方形](#Lesson12)
 *   [Lesson 12.5  Reviews(Degrees)](#Lesson125)
 *   [Lesson 13  Bouncing Ball game](#Lesson13)
+*   [Lesson 14  Flowers](#Lesson14)
 *   
 
 
@@ -349,7 +350,7 @@ Also you can add me as friend on Wechat.
 
 
 <a name="Lesson11"></a>
-## Lesson 11 Trampoline game
+## Lesson 11 六边形
 
 ### Key points:
 * 1.擦除（erase all）
@@ -414,6 +415,27 @@ Also you can add me as friend on Wechat.
 
 
 
+<a name="Lesson14"></a>
+## Lesson 14 Flowers
+* **本节课难点在于三层循环嵌套，或使用函数**
+
+### Key points:
+* 1.Add sprite, paint工具画花瓣
+* 2.旋转
+* 3.stamp复制花瓣
+
+
+
+### Steps:
+* 1. 画出花瓣
+* 2. 旋转 + stamp，画出一朵花
+* 3. repeat + move，画出一列花
+* 4. repeat + 旋转， 画出5列花
+
+
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/18.png?raw=true" width="60%" height="60%"</div>  <br></br>
+
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/%E8%8A%B1%E7%93%A3.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
 
 <!-- ACKNOWLEDGEMENTS -->
