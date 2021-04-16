@@ -55,7 +55,7 @@
 *   [Lesson 12.5  Reviews(Degrees)](#Lesson125)
 *   [Lesson 13  Bouncing Ball game](#Lesson13)
 *   [Lesson 14  Flowers](#Lesson14)
-*   
+*   [Lesson 15  Flappy Bird](#Lesson15)   
 
 
 
@@ -436,6 +436,35 @@ Also you can add me as friend on Wechat.
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/18.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/%E8%8A%B1%E7%93%A3.png?raw=true" width="60%" height="60%"</div>  <br></br>
+
+
+
+
+<a name="Lesson15"></a>
+## Lesson 15 Flappy Bird
+* **本节课难点在于理解管子与小鸟的运动逻辑**
+
+<div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/flappy.png?raw=true" width="60%" height="60%"</div>  <br></br>
+
+[Flappy Bird Online](https://flappybird.io/)
+
+### Key points:
+* 1.Mouse down(鼠标点击事件)
+* 2.Touching(Sprite碰撞事件)
+* 3.Glide to x: y: in ... seconds(在规定时间内移动到)
+
+
+
+### Steps:
+* 1. 画出管道
+* 2. 管道从右到左，循环移动（每次碰到边界，返回初始位置）
+* 3. 小鸟运动（如果点击鼠标，向上，否则向下）
+* 4. 小鸟碰到管道，Game Over
+
+**Bird**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/20.png?raw=true" width="60%" height="60%"</div>  <br></br>
+**Pipe**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/19.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
 
 <!-- ACKNOWLEDGEMENTS -->
