@@ -56,6 +56,8 @@
 *   [Lesson 13  Bouncing Ball game](#Lesson13)
 *   [Lesson 14  Flowers](#Lesson14)
 *   [Lesson 15  Flappy Bird](#Lesson15)   
+*   [Lesson 16  Ant and food](#Lesson16)   
+* 
 
 
 
@@ -466,6 +468,34 @@ Also you can add me as friend on Wechat.
 **Pipe**
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/19.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
+
+
+
+<a name="Lesson16"></a>
+## Lesson 16 Ant and food
+* **本节课难点在于理解蚂蚁转弯的原理**
+
+<div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/%E8%9A%82%E8%9A%81.png?raw=true" width="60%" height="60%"</div>  <br></br>
+
+
+### Key points:
+* 1.Touching color
+* 2.Color touching color
+* 3.Sprite touching sprite
+
+
+
+### Steps:
+* 1. 画出道路
+* 2. 画出蚂蚁触角
+* 3. 判断蚂蚁是否行进
+* 4. 判断蚂蚁是否转弯
+* 5. 判断食物是否跟随蚂蚁
+
+**Ant**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/21.png?raw=true" width="60%" height="60%"</div>  <br></br>
+**Food**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/22.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
