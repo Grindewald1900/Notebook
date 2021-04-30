@@ -57,7 +57,8 @@
 *   [Lesson 14  Flowers](#Lesson14)
 *   [Lesson 15  Flappy Bird](#Lesson15)   
 *   [Lesson 16  Ant and food](#Lesson16)   
-* 
+*   [Lesson 17  Floating Ball](#Lesson17)   
+
 
 
 
@@ -496,6 +497,50 @@ Also you can add me as friend on Wechat.
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/21.png?raw=true" width="60%" height="60%"</div>  <br></br>
 **Food**
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/22.png?raw=true" width="60%" height="60%"</div>  <br></br>
+
+
+
+
+<a name="Lesson17"></a>
+## Lesson 17 Floating Ball
+
+
+### Key points:
+* 1.Touching edge
+* 2.Loudness
+* 3.Variables
+
+
+
+
+### Steps:
+* 1. 调试浏览器，启用麦克风权限（开始运行后，点击弹窗中的确定）
+* 2. 创建变量(loudness, score)
+* 3. 判断音量大于三十，小球向上
+* 4. 判断音量小于三十，小球向下
+* 5. 判断小球接触边缘，停止游戏
+
+**Ball**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/23.png?raw=true" width="60%" height="60%"</div>  <br></br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
