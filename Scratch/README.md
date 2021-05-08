@@ -58,7 +58,7 @@
 *   [Lesson 15  Flappy Bird](#Lesson15)   
 *   [Lesson 16  Ant and food](#Lesson16)   
 *   [Lesson 17  Floating Ball](#Lesson17)   
-
+*   [Lesson 18  植物大战僵尸](#Lesson18)   
 
 
 
@@ -523,6 +523,31 @@ Also you can add me as friend on Wechat.
 **Ball**
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/23.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
+
+
+<a name="Lesson18"></a>
+## Lesson 18 植物大战僵尸
+
+
+### Key points:
+* 1.Zombie move
+* 2.Zombie death condition
+* 3.Hammer move
+
+
+
+
+### Steps:
+* 1. 僵尸不断移动
+* 2. 锤子移动（跟随鼠标）
+* 3. 判断僵尸死亡条件（锤子落下 && 锤子碰到僵尸）
+* 4. 死亡后重置位置
+
+**Zombie**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/24.png?raw=true" width="60%" height="60%"</div>  <br></br>
+
+**Hammer**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/25.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
 
 
