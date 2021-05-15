@@ -59,6 +59,8 @@
 *   [Lesson 16  Ant and food](#Lesson16)   
 *   [Lesson 17  Floating Ball](#Lesson17)   
 *   [Lesson 18  植物大战僵尸](#Lesson18)   
+*   [Lesson 19  恐龙照镜子](#Lesson19)   
+
 
 
 
@@ -549,6 +551,27 @@ Also you can add me as friend on Wechat.
 **Hammer**
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/25.png?raw=true" width="60%" height="60%"</div>  <br></br>
 
+
+<a name="Lesson19"></a>
+## Lesson 19 恐龙照镜子
+
+
+### Key points:
+* 1.Broadcast
+* 2.Receive message
+
+
+### Steps:
+* 1. 处理键盘事件
+* 2. 处理点击事件（循环换装）
+* 3. 发送广播
+* 4. 接收消息
+
+**dinosaur1**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/26.png?raw=true" width="70%" height="70%"</div>  <br></br>
+
+**dinosaur2**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/27.png?raw=true" width="40%" height="40%"</div>  <br></br>
 
 
 
