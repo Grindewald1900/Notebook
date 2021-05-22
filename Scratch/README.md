@@ -59,7 +59,9 @@
 *   [Lesson 16  Ant and food](#Lesson16)   
 *   [Lesson 17  Floating Ball](#Lesson17)   
 *   [Lesson 18  植物大战僵尸](#Lesson18)   
-*   [Lesson 19  恐龙照镜子](#Lesson19)   
+*   [Lesson 19  恐龙照镜子](#Lesson19)  
+*   [Lesson 20  拜新年](#Lesson20)
+ 
 
 
 
@@ -577,6 +579,34 @@ Also you can add me as friend on Wechat.
 
 
 
+<a>name="Lesson20</a>
+## Lesson 20 拜新年
+
+
+### Key points:
+* 1.Broadcast
+* 2.Receive message
+
+
+### Steps:
+* 1 分析春联出现顺序
+* 2 发送广播
+* 3 接收消息
+
+**1**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/28.png?raw=true" width="40%" height="40%"</div>  <br></br>
+
+**2**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/29.png?raw=true" width="40%" height="40%"</div>  <br></br>
+
+**3**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/30.png?raw=true" width="40%" height="40%"</div>  <br></br>
+
+**4**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/31.png?raw=true" width="40%" height="40%"</div>  <br></br>
+
+**5**
+* <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/32.png?raw=true" width="40%" height="40%"</div>  <br></br>
 
 
 
