@@ -61,7 +61,7 @@
 *   [Lesson 18  植物大战僵尸](#Lesson18)   
 *   [Lesson 19  恐龙照镜子](#Lesson19)  
 *   [Lesson 20  拜新年](#Lesson20)
- 
+*   [Lesson 21  元宵节](#Lesson21)
 
 
 
@@ -578,8 +578,7 @@ Also you can add me as friend on Wechat.
 
 
 
-
-<a>name="Lesson20</a>
+<a name="Lesson20"></a>
 ## Lesson 20 拜新年
 
 
@@ -609,6 +608,26 @@ Also you can add me as friend on Wechat.
 * <div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/32.png?raw=true" width="40%" height="40%"</div>  <br></br>
 
 
+
+<a name="Lesson21"></a>
+## Lesson 21 元宵节
+
+
+### Key points:
+* 1.Go to
+* 2.Glide to x y in 1 second
+
+
+### Steps:
+* 1 分析灯笼运动轨迹
+* 2 移动灯笼，添加随机数
+* 3 制作烟花（等待10s）
+
+**1**
+<div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/33.png?raw=true" width="40%" height="40%"</div>  <br></br>
+
+**2**
+<div><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Scratch/34.png?raw=true" width="40%" height="40%"</div>  <br></br>
 
 
 
