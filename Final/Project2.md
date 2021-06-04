@@ -13,20 +13,25 @@
 
 <!-- TABLE OF CONTENTS -->
 ### Table of Contents
-*   [1. Contribution of each member](#Part1)
-*   [2. Project description](#Part2)
-*   [3. Modeling Scheme](#Part3)
-*   [4. Implementation](#Part4)
-*   [5. Screenshots of the user interface](#Part5)
-*   [6. Conclusions and future works](#Part6)
+*   [0. Basis](#Part0)
+*   [1. Preliminaries](#Part1)
+*   [2. Complete Problems](#Part2)
+*   [3. Parallel Computation](#Part3)
+*   [4. Question1](#Part4)
+*   [5. Question2](#Part5)
+*   [6. Question3](#Part6)
 
 
 
+<a name="Part0"></a>
 ### Dependencies
+* [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
 * [Parallel Algorithm(CMU)](http://www.cs.cmu.edu/~scandal/html-papers/short/node1.html)
 * [Convex Hull](https://www.youtube.com/watch?v=B2AJoQSZf4M)
 * [Divide and Conquer](https://zhuanlan.zhihu.com/p/45986027)
 * [P-complete](https://en.wikipedia.org/wiki/P-complete)
+* [Turing machine](https://en.wikipedia.org/wiki/Turing_machine)
+* [Nondeterministic Turing machine](https://en.wikipedia.org/wiki/Nondeterministic_Turing_machine)
 
 ### Basic knowledge about Parallel Algorithms
 #### `Parallel Models of Computation`
@@ -98,3 +103,14 @@ polynomial time and if its inclusion in NC would imply that NC = P. Hence, the n
 Much early work in parallel algorithms aimed at showing that certain problems belonged to the class NC (without considering the issue of efficiency). This work tapered off, 
 however, as the importance of work-efficiency became evident. Also, even if a problem is P-complete, there may be efficient (but not necessarily polylogarithmic time) parallel
 algorithms for solving it. For example, several efficient and highly parallel algorithms are known for solving the maximum flow problem, which is P-complete.
+
+
+<a name="Part1"></a>
+### 1. Preliminaries
+The whole challenge is all about computational complexity theory, so we'll firstly introduce some terms related.
+#### 1.1  Terms and Definition
+**``**
+**``**
+**``**
+**``**
+**``**
