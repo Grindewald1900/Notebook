@@ -30,10 +30,32 @@
 * [Convex Hull](https://www.youtube.com/watch?v=B2AJoQSZf4M)
 * [Divide and Conquer](https://zhuanlan.zhihu.com/p/45986027)
 * [P-complete](https://en.wikipedia.org/wiki/P-complete)
+* [P VS NP](https://en.wikipedia.org/wiki/P_versus_NP_problem)
 * [Turing machine](https://en.wikipedia.org/wiki/Turing_machine)
 * [Nondeterministic Turing machine](https://en.wikipedia.org/wiki/Nondeterministic_Turing_machine)
 
-### Basic knowledge about Parallel Algorithms
+
+
+<a name="Part1"></a>
+### 1. Preliminaries
+The whole challenge is all about computational complexity theory, so we'll firstly introduce some terms related.
+#### 1.1  Terms and Definition
+**`Problem`**: the abstract question to be solved.  
+**`Problem instances`**：the conctrete input ω to a computational problem π.   
+**`Problem solution `**: the output of the problem with the given input.  
+**`Decision problems`**: one of the essential types of computational problems, whose solution is always TRUE or FALSE (1 or 0), 
+with given input and algorithm.  
+**`Complexity`**: intuitively the complexity is the difficulty to solve a problem, but we could have a more precise definition with some computational models, such as deterministic Turing machine.  we have various of measures to quantify the complexity of a certain problem, such as time, space(storage) and amount of communication.   
+**``**
+**``**
+**``**  
+
+#### 1.2  
+
+
+
+
+### 0. Basic knowledge about Parallel Algorithms
 #### `Parallel Models of Computation`
 Developing a standard parallel model of computation for analyzing algorithms has proven difficult because different parallel computers tend to vary significantly in
 their organizations. In spite of this difficulty, useful parallel models have emerged, along with a deeper understanding of the modeling process. In this section we describe 
@@ -103,14 +125,3 @@ polynomial time and if its inclusion in NC would imply that NC = P. Hence, the n
 Much early work in parallel algorithms aimed at showing that certain problems belonged to the class NC (without considering the issue of efficiency). This work tapered off, 
 however, as the importance of work-efficiency became evident. Also, even if a problem is P-complete, there may be efficient (but not necessarily polylogarithmic time) parallel
 algorithms for solving it. For example, several efficient and highly parallel algorithms are known for solving the maximum flow problem, which is P-complete.
-
-
-<a name="Part1"></a>
-### 1. Preliminaries
-The whole challenge is all about computational complexity theory, so we'll firstly introduce some terms related.
-#### 1.1  Terms and Definition
-**``**
-**``**
-**``**
-**``**
-**``**
