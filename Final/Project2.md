@@ -39,18 +39,38 @@
 <a name="Part1"></a>
 ### 1. Preliminaries
 The whole challenge is all about computational complexity theory, so we'll firstly introduce some terms related.
-#### 1.1  Terms and Definition
+#### 1.1  Basic notion 
 **`Problem`**: the abstract question to be solved.  
-**`Problem instances`**：the conctrete input ω to a computational problem π.   
+**`Problem instances`**：the concrete input ω to a computational problem π.   
 **`Problem solution `**: the output of the problem with the given input.  
 **`Decision problems`**: one of the essential types of computational problems, whose solution is always TRUE or FALSE (1 or 0), 
 with given input and algorithm.  
-**`Complexity`**: intuitively the complexity is the difficulty to solve a problem, but we could have a more precise definition with some computational models, such as deterministic Turing machine.  we have various of measures to quantify the complexity of a certain problem, such as time, space(storage) and amount of communication.   
+**`Complexity`**: intuitively the complexity is the difficulty to solve a problem, but we could have a more precise definition with some computational models, such as deterministic Turing machine.  We have various of measures to quantify the complexity of a certain problem, such as time, space(storage) and amount of communication.   
 **``**
 **``**
 **``**  
 
-#### 1.2  
+#### 1.2  Complexity classes
+Some complexity classes could be defined by their resources constraint, including time and space.   
+
+**`P`**: problems could be solved by a deterministic Turing machine within polynomial time.  
+**`NP`**: problems could be verified by a non-deterministic Turing machine with polynomial time.  
+**`L`**: problems could be solved by a deterministic Turing machine within logarithmic space.  
+**`NL`**: problems could be verified by a non-deterministic Turing machine with logarithmic space.  
+
+
+#### 1.3  Hardest Problems
+To find the hardest problems in a complexity class, it could be confused to compare some certain measures of a problem, such as time and space.
+For instance, one problem with less running time but more space versus another problem with less space but more running time. Thus, we have some definition for hard problems.  
+**`Easy problem`**: the reduction of the problem is in the inner class.  
+**`Hardest problem(complete)`**: the hardest problems π in a complexity class means any other problem π' could be reducted to it.
+**``**:
+**``**:
+**``**:
+**``**:
+
+
+
 
 
 
