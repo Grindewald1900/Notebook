@@ -69,7 +69,9 @@ For instance, one problem with less running time but more space versus another p
 **``**:
 **``**:
 
-
+#### 1.4 P versus NP
+P versus NP problem is one of the seven well known Millennium Prize Problems, it focus on whether the NP problem(could be verified in polynomial time) can also be solved within polynomial time(P problem). We regard it as 
+a significant problem mainly because of the hypothesis P = NP, which means all the NP problems, even the hardest ones(NPC problems), can be solved easily(in polynomial time). In this way, we can solve all the NP problems in polynomial time. Conversely, P ≠ NP (or P ⊆ NP) means there still exists some NP problems lying outside P, which include some hardest problems from NP having no solution within polynomial time. 
 
 
 
