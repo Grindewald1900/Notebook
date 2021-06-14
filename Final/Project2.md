@@ -27,6 +27,7 @@
 ### Dependencies
 * [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
 * [Parallel Algorithm(CMU)](http://www.cs.cmu.edu/~scandal/html-papers/short/node1.html)
+* [Parallel Computing](https://en.wikipedia.org/wiki/Parallel_computing)
 * [Convex Hull](https://www.youtube.com/watch?v=B2AJoQSZf4M)
 * [Divide and Conquer](https://zhuanlan.zhihu.com/p/45986027)
 * [P-complete](https://en.wikipedia.org/wiki/P-complete)
@@ -74,8 +75,13 @@ P versus NP problem is one of the seven well known Millennium Prize Problems, it
 a significant problem mainly because of the hypothesis P = NP, which means all the NP problems, even the hardest ones(NPC problems), can be solved easily(in polynomial time). In this way, we can solve all the NP problems in polynomial time. Conversely, P ≠ NP (or P ⊆ NP) means there still exists some NP problems lying outside P, which include some hardest problems from NP having no solution within polynomial time. 
 
 
-
-
+### 2 Parallel Computation
+    With the rapid development of CPU manufacturing technology, it has become more and more challenging to improve single-core performance, so CPU manufacturers turned to develop multicore processors. Consequently, people began to put more effort into parallel computation research, which means a problem can be solved by more than one processor simultaneously. In this way, reconfiguration was raised to satisfy the need for this kind of problem. Compared with traditional models, reconfigurable models can make better use of hardware resources, which means the processors could be used to run the tasks when available. As a result, reconfigurable models make it possible to solve the problem more efficiently.
+    
+#### 2.1
+#### 2.1
+#### 2.1
+#### 2.1
 
 ### 0. Basic knowledge about Parallel Algorithms
 #### `Parallel Models of Computation`
