@@ -142,11 +142,26 @@ Hence, we can show that
 Finally, NL is the subset of both POLYLOGSPACE and P, which means there exist an intersection between them.  
 
 #### 3.2 Define reductions for the purpose of defining complete problems for the class P. Explain carefully how are your reductions closed under functional composition.
+For class P, we define a LOG-SPACE reduction, which is computable by a deterministic Turing machine using logarithmic space. It's evident that LOG-SPACE reduction is weaker than 
+polynomial-time reduction and NC reduction. 
 
+**Theorem 3** DSPACE(S(n) ⊆ S{DTIME(cS(n)) | c ≥ 1}, for S(n) ≥ log(n).  
 
-<h4 align="center"> </h4>
-<h4 align="center"> </h4>
-<h4 align="center"> </h4>
+Since LOG-SPACE reduction features space restrictions, according to Theorem 3, we have  
+<h4 align="center"> DSPACE(log(n)) ⊆  ∪DTIME(c^log(n))</h4>
+where c is a constant larger than 1.  
+
+As we know, DTIME(c^log(n)) could be regarded as polynomial-time, in this way, LOG-SPACE reduction also features polynomial-time restriction. If problem A is in class P, and class B can be LOG-SPACE reducted to A, 
+<h4 align="center"> B <=L A </h4>
+
+With regard to problem B, it's obiously in Class P, because A is polynomial-time solvable and the reduction from B to A also features polynomial-time restriction. Thus we have
+<h4 align="center"> B ∈ P </h4>
+  
+Hence, we can come to the conclusion that whenever A is in class P and B LOG-SPACE reduces to A, B is also in class P. Also, when it comes to a third problem C, if C LOG-SPACE reduces to B, we can affirm that C is also in class P for the same reason, which indicates that LOG-SPACE reduction is closed under functional composition for class P.  
+  
+#### 3.3 Define the class of P-complete problems. Explain carefully how showing that a P-complete problem is in PLOYLOGSPACE results in the whole class P being included in
+POLYLOGSPACE. Explain the practical consequences of finding that P-complete problems are or are not in POLYLOGSPACE.  
+
 <h4 align="center"> </h4>
 <h4 align="center"> </h4>
 <h4 align="center"> </h4>
