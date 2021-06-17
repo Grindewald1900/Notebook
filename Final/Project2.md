@@ -87,7 +87,9 @@ P versus NP problem is one of the seven well-known Millennium Prize Problems, an
 
 
 ### 2. Parallel Computation
-    With the rapid development of CPU manufacturing technology, it has become more and more challenging to improve single-core performance, so CPU manufacturers turned to develop multicore processors. Consequently, people began to put more effort into parallel computation research, which means a problem can be solved by more than one processor simultaneously. In this way, reconfiguration was raised to satisfy the need for this kind of problem. Compared with traditional models, reconfigurable models can make better use of hardware resources, which means the processors could be used to run the tasks when available. As a result, reconfigurable models make it possible to solve the problem more efficiently.
+    With the rapid development of CPU manufacturing technology, it has become more and more challenging to improve single-core performance, so CPU manufacturers turned to develop multicore processors. Consequently, people began to put more effort into parallel computation research, which means a problem can be solved by more than one processor simultaneously.
+    The traditional parallel model is what we call PRAM model(parallel random access memory), which is a shared memory machine deployed with some parallel algorithms. To deal with read/write conflicts, there are some strategies for PRAM, which include EREW(Exclusive read exclusive write)， CREW(Concurrent read exclusive write), ERCW(Exclusive read concurrent write), and CRCW(Concurrent read concurrent write).[]
+    Recent years, people find it hard to keep processors synchronized on PRAM, so reconfiguration was raised to satisfy the need for this kind of problem. Compared with traditional models, reconfigurable models can make better use of hardware resources, which means the processors could be used to run the tasks when available. As a result, reconfigurable models make it possible to solve the problem more efficiently.
     
 #### 2.1
 #### 2.1
@@ -119,22 +121,27 @@ that is,
 <h4 align="center">NL ⊆  POLYLOGSPACE.</h4>  
 
 **Theorem 2** The time complexity of DFS or BFS is O(n^2).  
+
 Considering that we have an Off-line Turing Machine M, we define a configuration as the storage of work tape at one moment.  
 For NL, we have
-<h4 align="center"> NL ⊆  DSPACE(log(n)^2) </h4>
+<h4 align="center">S(n) = log(n)  </h4>
 
 Which means we have C configurations, where
-<h4 align="center">C = c^log(n)^2 (c is a constant)</h4>
+<h4 align="center">C = |Γ|^log(n) = POLY(n) (Γ is a the alphabet of M)</h4>
+
+we can consider C as polynomial.  
 
 If we regard these configurations as a graph G(V,E), and each node ci represents a certain configuration. Moreover, there exist an
 edge between ci and cj iff we can convert ci to cj in a single step, which means they are close enough. According to Theorem 2, C^2 time 
 need to be spent to traverse the tree. 
-<h4 align="center">C^2 = (c^log(n)^2)^2 = c^2n </h4>
+<h4 align="center">C^2 = (POLY(n))^2 = POLY(n) </h4>
 
-Finally, we can show that 
-<h4 align="center"> NL ⊆  DSPACE(log(n)^2) = DTIME(c^2n)  </h4>
+Hence, we can show that 
+<h4 align="center"> NL = DTIME(POLY(n)) ⊆ P = ∪DTIME(POLY(n)) </h4>  
 
+Finally, NL is the subset of both POLYLOGSPACE and P, which means there exist an intersection between them.  
 
+#### 3.2 Define reductions for the purpose of defining complete problems for the class P. Explain carefully how are your reductions closed under functional composition.
 
 
 <h4 align="center"> </h4>
