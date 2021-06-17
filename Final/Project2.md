@@ -13,28 +13,48 @@
 
 <!-- TABLE OF CONTENTS -->
 ### Table of Contents
-*   [0. Basis](#Part0)
 *   [1. Preliminaries](#Part1)
-*   [2. Complete Problems](#Part2)
-*   [3. Parallel Computation](#Part3)
-*   [4. Question1](#Part4)
-*   [5. Question2](#Part5)
-*   [6. Question3](#Part6)
+*   [2. Parallel Computation](#Part2)
+*   [3. P versus POLYLOGSPACE](#Part3)
 
 
 
-<a name="Part0"></a>
+
 ### Dependencies
-* [Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
-* [Computational Complexity(MIT)](https://www.youtube.com/watch?v=moPtwq_cVH8&list=RDCMUCEBb1b_L6zDS3xTUrIALZOw&start_radio=1)
-* [Parallel Algorithm(CMU)](http://www.cs.cmu.edu/~scandal/html-papers/short/node1.html)
-* [Parallel Computing](https://en.wikipedia.org/wiki/Parallel_computing)
-* [Convex Hull](https://www.youtube.com/watch?v=B2AJoQSZf4M)
-* [Divide and Conquer](https://zhuanlan.zhihu.com/p/45986027)
-* [P-complete](https://en.wikipedia.org/wiki/P-complete)
-* [P VS NP](https://en.wikipedia.org/wiki/P_versus_NP_problem)
-* [Turing machine](https://en.wikipedia.org/wiki/Turing_machine)
-* [Nondeterministic Turing machine](https://en.wikipedia.org/wiki/Nondeterministic_Turing_machine)
+#### Class A - important notebook or lecture
+* [A-MIT-Complexity Theory-Youtube](https://www.youtube.com/watch?v=moPtwq_cVH8)
+* [A-Complexity-lecture9.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/A-Complexity-lecture9.pdf)
+* [A-Introduction-To-The-Theory-Of-Computation-Michael-Sipser.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/A-Introduction-To-The-Theory-Of-Computation-Michael-Sipser.pdf)
+* [A-NPC-Lecture.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/A-NPC-Lecture.pdf)
+* [A-Turing and the Development of Computational.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/A-Turing%20and%20the%20Development%20of%20Computational.pdf)
+* [A-Wikipedia - Computational complexity theory.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/A-Wikipedia%20-%20Computational%20complexity%20theory.pdf)
+* [A-oct9.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/A-oct9.pdf)
+* [A-《算法导论》第三版英文版.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/A-%E3%80%8A%E7%AE%97%E6%B3%95%E5%AF%BC%E8%AE%BA%E3%80%8B%E7%AC%AC%E4%B8%89%E7%89%88%E8%8B%B1%E6%96%87%E7%89%88.pdf)
+
+
+#### Class B - reference notebook
+* [B-Complexity theory of parallel time and hardware.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/B-Complexity%20theory%20of%20parallel%20time%20and%20hardware.pdf)
+* [B-Parallel Dynamic.Reconfiguration.Architectures.and.Algorithms.Feb.2004.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/B-Parallel%20Dynamic.Reconfiguration.Architectures.and.Algorithms.Feb.2004.pdf)
+* [B-Parallel computing.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/B-Parallel%20computing.pdf)
+* [B-cook-1971-NP-completeness-of-SAT.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/B-cook-1971-NP-completeness-of-SAT.pdf)
+* [CS567 - Special/Advanced Topics in Algorithms - A5](https://github.com/Grindewald1900/CS567/blob/master/Assignment/A5/Assignment5.md)
+
+
+#### Class C - related lecture, wiki, forum or other references.
+* [C-Does reachability belong to P - Computer Science Stack Exchange.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/C-Complexity%20theory%20-%20Does%20reachability%20belong%20to%20P_%20-%20Computer%20Science%20Stack%20Exchange.pdf)
+* [C-lec12.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/C-lec12.pdf)
+* [C-lec5.pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/C-lec5.pdf)
+* [C-Computational complexity theory](https://en.wikipedia.org/wiki/Computational_complexity_theory)
+* [C-Computational Complexity(MIT)](https://www.youtube.com/watch?v=moPtwq_cVH8&list=RDCMUCEBb1b_L6zDS3xTUrIALZOw&start_radio=1)
+* [C-Parallel Algorithm(CMU)](http://www.cs.cmu.edu/~scandal/html-papers/short/node1.html)
+* [C-Parallel Computing](https://en.wikipedia.org/wiki/Parallel_computing)
+* [C-Convex Hull](https://www.youtube.com/watch?v=B2AJoQSZf4M)
+* [C-Divide and Conquer](https://zhuanlan.zhihu.com/p/45986027)
+* [C-Wikipedia-P-complete](https://en.wikipedia.org/wiki/P-complete)
+* [C-Wikipedia-P VS NP](https://en.wikipedia.org/wiki/P_versus_NP_problem)
+* [C-Wikipedia-Turing machine](https://en.wikipedia.org/wiki/Turing_machine)
+* [C-Wikipedia - L (complexity) .pdf](https://github.com/Grindewald1900/Notebook/blob/master/Final/C-Wikipedia%20-%20L%20(complexity)%20.pdf)
+* [C-Wikipedia-Nondeterministic Turing machine](https://en.wikipedia.org/wiki/Nondeterministic_Turing_machine)
 
 
 
@@ -69,7 +89,6 @@ A complexity class is a collection of sets that can be accepted by Turing machin
 **`L`**: DSPACE(log(n)) contains problems that a deterministic Turing machine could solve within logarithmic space.  
 **`NL`**: NSPACE(log(n)) contains problems that a nondeterministic Turing machine could verify with logarithmic space.  
 **`POLYLOGSPACE`** ∪{DSPACE(log(n)k) | k ≥ 1},  problems could be solved by a deterministic Turing machine within polylogarithmic space.  
-** "**
 
 
 #### 1.3  Hardest Problems
@@ -77,27 +96,23 @@ To find the hardest problems in a complexity class, it could be confused to comp
 For instance, one problem with less running time but more space versus another problem with less space but more running time. Thus, we have some definitions for hard problems.  
 **`Easy problem`**: the reduction of the problem is in the inner class.  
 **`Hardest problem(complete)`**: the hardest problem π in a complexity class means any other problem π' could be reducted to it.
-** "**:
-** "**:
-** "**:
-** "**:
+
 
 #### 1.4 P versus NP
 P versus NP problem is one of the seven well-known Millennium Prize Problems, and it focuses on whether the NP problem(could be verified in polynomial time) can also be solved within polynomial time(P problem). We regard it as a significant problem mainly because of the hypothesis P = NP, which means all the NP problems, even the hardest ones(NPC problems), can be solved efficiently (in polynomial time). In this way, we can solve all the NP problems in polynomial time. Conversely, P ≠ NP (or P ⊆ NP) means there still exists some NP problems lying outside P, which include some hardest problems from NP having no solution within polynomial time. 
 
-
+<a name="Part2"></a>
 ### 2. Parallel Computation
     With the rapid development of CPU manufacturing technology, it has become more and more challenging to improve single-core performance, so CPU manufacturers turned to develop multicore processors. Consequently, people began to put more effort into parallel computation research, which means a problem can be solved by more than one processor simultaneously.
     The traditional parallel model is what we call PRAM model(parallel random access memory), which is a shared memory machine deployed with some parallel algorithms. To deal with read/write conflicts, there are some strategies for PRAM, which include EREW(Exclusive read exclusive write)， CREW(Concurrent read exclusive write), ERCW(Exclusive read concurrent write), and CRCW(Concurrent read concurrent write).[]
     Recent years, people find it hard to keep processors synchronized on PRAM, so reconfiguration was raised to satisfy the need for this kind of problem. Compared with traditional models, reconfigurable models can make better use of hardware resources, which means the processors could be used to run the tasks when available. As a result, reconfigurable models make it possible to solve the problem more efficiently.
     
 #### 2.1
-#### 2.1
-#### 2.1
-#### 2.1
+#### 2.2
+#### 2.3
 
 
-
+<a name="Part3"></a>
 ### 3. P versus POLYLOGSPACE
 To compare P and NP, we know the hierarchy between these two complexity classes, that is, P ⊆ NP. However, when it comes to P vs POLYLOGSPACE, we don't have a clue about the relationship between them. Thus, we are trying to find a complexity class that is a subset of both two classes.
 #### 3.1 Prove that NL ⊆ P and NL ⊆ POLYLOGSPACE.
@@ -142,26 +157,31 @@ Hence, we can show that
 Finally, NL is the subset of both POLYLOGSPACE and P, which means there exist an intersection between them.  
 
 #### 3.2 Define reductions for the purpose of defining complete problems for the class P. Explain carefully how are your reductions closed under functional composition.
-For class P, we define a LOG-SPACE reduction, which is computable by a deterministic Turing machine using logarithmic space. It's evident that LOG-SPACE reduction is weaker than 
-polynomial-time reduction and NC reduction. 
-
-**Theorem 3** DSPACE(S(n) ⊆ S{DTIME(cS(n)) | c ≥ 1}, for S(n) ≥ log(n).  
-
-Since LOG-SPACE reduction features space restrictions, according to Theorem 3, we have  
-<h4 align="center"> DSPACE(log(n)) ⊆  ∪DTIME(c^log(n))</h4>
-where c is a constant larger than 1.  
-
-As we know, DTIME(c^log(n)) could be regarded as polynomial-time, in this way, LOG-SPACE reduction also features polynomial-time restriction. If problem A is in class P, and class B can be LOG-SPACE reducted to A, 
+For class P, we define a PARALLEL-LOG reduction, which is computable in time O(log(n)^c) using O(n^k) parallel processors. It's evident that PARALLEL-LOG reduction can be 
+simulated by a single processor machine with time T
+<h4 align="center">T = (log(n)^c) * (n^k) = POLY(n) </h4>
+in this way, PARALLEL-LOG reduction also features polynomial-time restriction. If problem A is in class P, and class B can be PARALLEL-LOG reducted to A, we have
 <h4 align="center"> B <=L A </h4>
 
 With regard to problem B, it's obiously in Class P, because A is polynomial-time solvable and the reduction from B to A also features polynomial-time restriction. Thus we have
 <h4 align="center"> B ∈ P </h4>
   
-Hence, we can come to the conclusion that whenever A is in class P and B LOG-SPACE reduces to A, B is also in class P. Also, when it comes to a third problem C, if C LOG-SPACE reduces to B, we can affirm that C is also in class P for the same reason, which indicates that LOG-SPACE reduction is closed under functional composition for class P.  
+Hence, we can come to the conclusion that whenever A is in class P and B PARALLEL-LOG reduces to A, B is also in class P. Also, when it comes to a third problem C, if C PARALLEL-LOG reduces to B, we can affirm that C is also in class P for the same reason, which indicates that PARALLEL-LOG reduction is closed under functional composition for class P.  
   
 #### 3.3 Define the class of P-complete problems. Explain carefully how showing that a P-complete problem is in PLOYLOGSPACE results in the whole class P being included in
 POLYLOGSPACE. Explain the practical consequences of finding that P-complete problems are or are not in POLYLOGSPACE.  
+Intuitively, P-complete problems are the hardest problems in class P. According to the definition of hardest problem in section 1.3, a problem A is P-complete if 
+<h4 align="center">A is in P </h4>
+<h4 align="center">every problem in P can be reduced to A with PARALLEL-LOG reduction</h4>
+  
+  
+<h4 align="center"> </h4>
+Since P-complete problems are the most unsolvable individuals in class P, if any P-complete problem can be solved fast on a parallel machine, which means P-complete problems
+are in PLOYLOGSPACE, as a consequence, every problem in class P will be included in PLOYLOGSPACE. In this way, we will have
+  <h4 align="center"> P ⊆ PLOYLOGSPACE</h4>
 
-<h4 align="center"> </h4>
-<h4 align="center"> </h4>
-<h4 align="center"> </h4>
+Conversly, if no P-complete problem can be solved efficiently on a parallel machine, then P-complete problems are obviously lying outside POLYLOGSPACE, thus
+  <h4 align="center"> P ≠ PLOYLOGSPACE</h4>
+ which means there exists some hard problems in class P that can not be solved fast with parallelism. Finally, some tractable problems still remain inherently sequential.
+ 
+ 
