@@ -74,6 +74,9 @@ with given input and algorithm. We mainly focus on decision problems because oth
 **`Nondeterministic Turing machine`** NTM is a TM that allows for a choice of next moves.  
 **`Off-line Turing machines`**  An off-line Turing machine is a multi tape Turing machine with a separate read-only input tape[A2011 P5], which is used to define the space complexity.
 
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Final/1.png?raw=true" alt="Logo" width="600"></div>
+
+
 #### 1.2  Complexity classes
 A complexity class is a collection of sets that can be accepted by Turing machines with the same resources[A2011 P5]. Some complexity classes could be defined by their resources constraint, including time and space.   
 
@@ -117,6 +120,9 @@ P versus NP problem is one of the seven well-known Millennium Prize Problems, an
 To compare P and NP, we know the hierarchy between these two complexity classes, that is, P ⊆ NP. However, when it comes to P vs POLYLOGSPACE, we don't have a clue about the relationship between them. Thus, we are trying to find a complexity class that is a subset of both two classes.
 #### 3.1 Prove that NL ⊆ P and NL ⊆ POLYLOGSPACE.
 Here we introduce class NL, which has been defined in section 1. Intuitively, NL is a subset of P and POLYLOGSPACE. 
+
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Final/2.png?raw=true" alt="Logo" width="600"></div>
+
 
 **Theorem 1**  (Savitch)  If S is fully space-constructible and S(n) ≥ log(n), then NSPACE(S(n)) ⊆ DSPACE(S2(n)).   
 
@@ -174,14 +180,18 @@ Intuitively, P-complete problems are the hardest problems in class P. According 
 <h4 align="center">A is in P </h4>
 <h4 align="center">every problem in P can be reduced to A with PARALLEL-LOG reduction</h4>
   
-  
-<h4 align="center"> </h4>
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Final/4.png?raw=true" alt="Logo" width="600"></div>
+
+ 
 Since P-complete problems are the most unsolvable individuals in class P, if any P-complete problem can be solved fast on a parallel machine, which means P-complete problems
 are in PLOYLOGSPACE, as a consequence, every problem in class P will be included in PLOYLOGSPACE. In this way, we will have
   <h4 align="center"> P ⊆ PLOYLOGSPACE</h4>
 
 Conversly, if no P-complete problem can be solved efficiently on a parallel machine, then P-complete problems are obviously lying outside POLYLOGSPACE, thus
   <h4 align="center"> P ≠ PLOYLOGSPACE</h4>
+<div align=center><img src="https://github.com/Grindewald1900/Notebook/blob/master/Image/Final/5.png?raw=true" alt="Logo" width="600"></div>
+
+ 
  which means there exists some hard problems in class P that can not be solved fast with parallelism. Finally, some tractable problems still remain inherently sequential.
  
  
