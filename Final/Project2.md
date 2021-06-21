@@ -78,7 +78,7 @@ with given input and algorithm. We mainly focus on decision problems because oth
 
 
 #### 1.2  Complexity classes
-A complexity class is a collection of sets that can be accepted by Turing machines with the same resources[A2011 P5]. Some complexity classes could be defined by their resources constraint, including time and space.   
+A complexity class is a collection of sets that can be accepted by Turing machines with the same resources[A2011 P5]. Basically, We classify the complexity classes according to their resources constraint, including time and space.   
 
 **`T(n)`** M is a T(n) time-bounded Turing machine if for every input of length n, M makes at most T(n) moves before halting.[A2011 P5]  
 **`S(n)`** M is an S(n) space-bounded Turing machine if, for every word of length n, M scans at most S(n) cells on any storage tape.  
@@ -87,11 +87,11 @@ A complexity class is a collection of sets that can be accepted by Turing machin
 **`DSPACE(S(n))`** is the set of all languages having space-complexity S(n).   
 **`NSPACE(S(n))`** is the set of all languages accepted by nondeterministic S(n) time-bounded Turing machines.   
 
-**`P`**: ∪{DTIME(n^k) | k ≥ 1}, contains problems that a deterministic Turing machine could solve within polynomial time.  
-**`NP`**: ∪{NTIME(n^k) | k ≥ 1}, contains problems that a nondeterministic Turing machine could verify with polynomial time.  
-**`L`**: DSPACE(log(n)) contains problems that a deterministic Turing machine could solve within logarithmic space.  
-**`NL`**: NSPACE(log(n)) contains problems that a nondeterministic Turing machine could verify with logarithmic space.  
-**`POLYLOGSPACE`** ∪{DSPACE(log(n)k) | k ≥ 1},  problems could be solved by a deterministic Turing machine within polylogarithmic space.  
+**`P`**: t(n) = ∪{DTIME(n^k) | k ≥ 1}, class P contains problems that a deterministic Turing machine could solve within polynomial time.  
+**`NP`**: t(n) = ∪{NTIME(n^k) | k ≥ 1} ,class NP contains problems that a nondeterministic Turing machine could verify with polynomial time.  
+**`L`**: s(n) = DSPACE(log(n)), class L contains problems that a deterministic Turing machine could solve within logarithmic space.  
+**`NL`**: s(n) =  NSPACE(log(n)), class NL contains problems that a nondeterministic Turing machine could verify with logarithmic space.  
+**`POLYLOGSPACE`** s(n) = ∪{DSPACE(log(n)k) | k ≥ 1},  problems could be solved by a deterministic Turing machine within polylogarithmic space.  
 
 
 #### 1.3  Hardest Problems
