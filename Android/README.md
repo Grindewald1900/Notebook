@@ -20,7 +20,7 @@ For the languages, you can develop android apps either by using Kotlin or Java. 
 **Data Structure and Algorithms**  
 
 **Gradle**  
-
+To prepare your software project for growth, you can organize a [Gradle](https://docs.gradle.org/current/userguide/what_is_gradle.html) project into multiple subprojects to modularize the software you are building. 
 ### Version Control(Repo hosting)
 * Github
 
