@@ -22,26 +22,100 @@ For the languages, you can develop android apps either by using Kotlin or Java. 
 **5. Gradle**  
 To prepare your software project for growth, you can organize a [Gradle](https://docs.gradle.org/current/userguide/what_is_gradle.html) project into multiple subprojects to modularize the software you are building.   
 **Five things you need to know about Gradle**
-* 1. Gradle is a general-purpose build tool  
+1. Gradle is a general-purpose build tool  
 Gradle allows you to build any software, because it makes few assumptions about what you’re trying to build or how it should be done. The most notable restriction is that dependency management currently only supports Maven- and Ivy-compatible repositories and the filesystem.
 
 This doesn’t mean you have to do a lot of work to create a build. Gradle makes it easy to build common types of project — say Java libraries — by adding a layer of conventions and prebuilt functionality through plugins. You can even create and publish custom plugins to encapsulate your own conventions and build functionality.
 
 2. The core model is based on tasks
-* 2. The core model is based on tasks
-* 3. Gradle has several fixed build phases
 
+3. Gradle has several fixed build phases
+It’s important to understand that Gradle evaluates and executes build scripts in three phases:
+
+* `Initialization` 
+Sets up the environment for the build and determine which projects will take part in it.
+
+* `Configuration`  
+Constructs and configures the task graph for the build and then determines which tasks need to run and in which order, based on the task the user wants to run.
+
+* `Execution`  
+Runs the tasks selected at the end of the configuration phase.
+
+These phases form Gradle’s Build Lifecycle.  
+
+4. Gradle is extensible in more ways than one
+Gradle provides several mechanisms that allow you to extend it, such as:
+
+* `Custom task types`.  
+When you want the build to do some work that an existing task can’t do, you can simply write your own task type. It’s typically best to put the source file for a custom task type in the buildSrc directory or in a packaged plugin. Then you can use the custom task type just like any of the Gradle-provided ones.
+
+* `Custom task actions`.  
+You can attach custom build logic that executes before or after a task via the Task.doFirst() and Task.doLast() methods.
+
+Extra properties on projects and tasks.
+
+These allows you to add your own properties to a project or task that you can then use from your own custom actions or any other build logic. Extra properties can even be applied to tasks that aren’t explicitly created by you, such as those created by Gradle’s core plugins.
+
+* `Custom conventions`.   
+Conventions are a powerful way to simplify builds so that users can understand and use them more easily. This can be seen with builds that use standard project structures and naming conventions, such as Java builds. You can write your own plugins that provide conventions — they just need to configure default values for the relevant aspects of a build.
+
+* `A custom model`.  
+Gradle allows you to introduce new concepts into a build beyond tasks, files and dependency configurations. You can see this with most language plugins, which add the concept of source sets to a build. Appropriate modeling of a build process can greatly improve a build’s ease of use and its efficiency.  
+
+5. Build scripts operate against an API
+
+To build an Android Application
+```Kotlin
+plugins {
+    id("com.android.application") version "4.2.2"
+}
+
+repositories {
+    google()
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion(30)
+    defaultConfig {
+        applicationId = "org.gradle.samples"
+        minSdkVersion(16)
+        targetSdkVersion(30)
+        versionCode = 1
+        versionName = "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+}
+
+dependencies {
+    implementation("androidx.appcompat:appcompat:1.2.0")
+    implementation("com.google.android.material:material:1.2.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
+    testImplementation("junit:junit:4.13.1")
+    androidTestImplementation("androidx.test.ext:junit:1.1.2")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+}
+```
 
 
 
 
 ### Version Control(Repo hosting)
+Some basic [git commands](https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html) .  
 * Github
 
 * Gitlab
 
 
 ### Build Application
+Android [Documentation](https://developer.android.com/docs)
+* App Architecture [[Here]](https://developer.android.com/jetpack/guide)
 * Activity and Lifecycle
 
 * Fragments
