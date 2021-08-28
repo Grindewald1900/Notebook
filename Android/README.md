@@ -1,5 +1,14 @@
 ## Android
 
+
+### Tutorials
+* **Android Codelabs**
+Google Developers [Codelabs](https://codelabs.developers.google.com/?cat=android) provide a guided, tutorial, hands-on coding experience. Most codelabs will step you through the process of building a small application, or adding a new feature to an existing application.  
+
+* **Training**
+Find the [training](https://developer.android.com/courses)option that's right for you.
+
+* 
 ### Language
 [Kotlin](https://kotlinlang.org/) is better for beginner, while Java is still doing great.
 For the languages, you can develop android apps either by using Kotlin or Java. Although, you can use both Kotlin and Java to develop native android apps,Google announced in 2019 to make Kotlin the preferred way of developing android applications. If you were to start learning android development today, Kotlin should be your language of choice.
@@ -117,14 +126,33 @@ Some basic [git commands](https://confluence.atlassian.com/bitbucketserver/basic
 Android [Documentation](https://developer.android.com/docs)
 * App Architecture [[Here]](https://developer.android.com/jetpack/guide)
 * Activity and Lifecycle
-
 * Fragments
 * Components
+* Android App Bundles
 * Content Provider
 * App Configurations
-* Intents
 * Context
+* Intents and Intent Filters
+* UI & Navigation
+* Animations & Transitions
+* Images & Graphics
+* Audio & Video
+* Background Tasks
+* App Data & Files
+* User Data & Identity
+* User Location
+* Touch & Input
+* Camera
+* CameraX
+* Sensors
+* Connectivity
+* Renderscript
+* Web-Based Content
 * 3rd Libraries
+
+* Android NDK
+* Google Play Services
+* Android Releases
 
 ### Robust Application
 * Security
