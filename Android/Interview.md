@@ -15,7 +15,15 @@
 ### Core Android
 #### Base
 
-* **Tell all the Android application components.** - [Learn from here](https://developer.android.com/guide/components/fundamentals.html#Components)
+* **Tell all the Android application components.** - [Learn from here](https://developer.android.com/guide/components/fundamentals.html#Components)   
+
+`Activity` An activity is the entry point for interacting with the user. It represents a single screen with a user interface.   
+
+`Services` A service is a general-purpose entry point for keeping an app running in the background for all kinds of reasons. For example, a service might play music in the background while the user is in a different app, or it might fetch data over the network without blocking user interaction with an activity.   
+
+`Broadcast receivers`  A broadcast receiver is a component that enables the system to deliver events to the app outside of a regular user flow, allowing the app to respond to system-wide broadcast announcements.  The system can deliver broadcasts even to apps that aren't currently running.   
+
+`Content providers` A content provider manages a shared set of app data that you can store in the file system, in a SQLite database, on the web, or on any other persistent storage location that your app can access. Through the content provider, other apps can query or modify the data if the content provider allows it.   
 
 
 * **What is the project structure of an Android Application?** - [Learn from here](https://developer.android.com/studio/projects)
