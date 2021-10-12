@@ -98,12 +98,12 @@ onCreate() will be called only once, which could be efficient.
 4. A fragment can be reuse in multiple activities.  
 5. A fragment life cycle is closely related to the lifecycle of its host activity which means when the activity is in the pause state, all the fragments available in the activity will also stop.  
 Fragments added to the Android API in Android 3.0 which API version 11 to support flexible UI on large screens.  
-![Fragment](https://developer.android.com/images/guide/fragments/fragment-view-lifecycle.png)  
+![Fragment](https://developer.android.com/images/guide/fragments/fragment-view-lifecycle.png, width = 60%)  
 
 
 * **What are "launch modes"?** - [Learn from here](https://medium.com/mindorks/android-launch-mode-787d28952959)  
-- [Task](https://developer.android.com/guide/components/activities/tasks-and-back-stack)
-- [Launch Mode](https://medium.com/mindorks/android-launch-mode-787d28952959)  
+    - [Task](https://developer.android.com/guide/components/activities/tasks-and-back-stack)
+    - [Launch Mode](https://medium.com/mindorks/android-launch-mode-787d28952959)  
 1. standard
 2. singleTop
 3. singleTask
@@ -114,11 +114,13 @@ Fragments are Android's solution to creating reusable user interfaces.
     - When you have some UI components to be used across various activities
     - When multiple view can be displayed side by side just like viewPager
 
-* **What is the difference between FragmentPagerAdapter vs FragmentStatePagerAdapter?**
-    - FragmentPagerAdapter: Each fragment visited by the user will be stored in the memory but the view will be destroyed. When the page is revisited, then the view will be created not the instance of the fragment.
-    - FragmentStatePagerAdapter: Here, the fragment instance will be destroyed when it is not visible to the user, except the saved state of the fragment.
+* **What is the difference between FragmentPagerAdapter vs FragmentStatePagerAdapter?**  
+    Like the docs say, think about it this way. If you were to do an application like a book reader, you will not want to load all the fragments into memory at once. You would like to load and destroy Fragments as the user reads. In this case you will use FragmentStatePagerAdapter. If you are just displaying 3 "tabs" that do not contain a lot of heavy data (like Bitmaps), then FragmentPagerAdapter might suit you well. Also, keep in mind that ViewPager by default will load 3 fragments into memory. The first Adapter you mention might destroy View hierarchy and re load it when needed, the second Adapter only saves the state of the Fragment and completely destroys it, if the user then comes back to that page, the state is retrieved.  
 
-* **16.What is the difference between adding/replacing fragment in backstack?** - [Learn from here](https://stackoverflow.com/questions/24466302/basic-difference-between-add-and-replace-method-of-fragment/24466345)
+* **16.What is the difference between adding/replacing fragment in backstack?** - [Learn from here](https://stackoverflow.com/questions/24466302/basic-difference-between-add-and-replace-method-of-fragment/24466345)  
+    - `replace` removes the existing fragment and adds a new fragment.
+
+    - `add` retains the existing fragments and adds a new fragment that means existing fragment will be active and they wont be in 'paused' state hence when a back button is pressed onCreateView() is not called for the existing fragment(the fragment which was there before new fragment was added).   
 
 * **Why is it recommended to use only the default constructor to create a `Fragment`?** - [Learn from here](https://www.youtube.com/watch?v=9EdvcycKP9A)
 
