@@ -122,9 +122,12 @@ Fragments are Android's solution to creating reusable user interfaces.
 
     - `add` retains the existing fragments and adds a new fragment that means existing fragment will be active and they wont be in 'paused' state hence when a back button is pressed onCreateView() is not called for the existing fragment(the fragment which was there before new fragment was added).   
 
-* **Why is it recommended to use only the default constructor to create a `Fragment`?** - [Learn from here](https://www.youtube.com/watch?v=9EdvcycKP9A)
+* **Why is it recommended to use only the default constructor to create a `Fragment`?** - [Learn from here](https://www.youtube.com/watch?v=9EdvcycKP9A)  
+You can use [FragmentFactory](https://proandroiddev.com/android-fragments-fragmentfactory-ceec3cf7c959) instead.  
 
 * **How would you communicate between two Fragments?** - [Learn from here](https://blog.mindorks.com/how-to-communicate-between-fragments)
+1. With the help of ViewModel  
+2. With the help of Interface  
 
 * **What is retained `Fragment`?**
     - By default, Fragments are destroyed and recreated along with their parent Activity’s when a configuration change occurs. Calling setRetainInstance(true) allows us to bypass this destroy-and-recreate cycle, signaling the system to retain the current instance of the fragment when the activity is recreated.
