@@ -1,0 +1,438 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        body {
+            background-image: url(Marin.jpg);
+        }
+
+        #box1 {
+            width: 150px;
+            height: 20px;
+            border: 2px black solid;
+            position: absolute;
+            bottom: 800px;
+            left: 100px;
+            text-align: center;
+            font-family: monospace;
+            font-size: large;
+
+        }
+
+        #box2 {
+            width: 150px;
+            height: 20px;
+            border: 2px black solid;
+            position: absolute;
+            bottom: 1000px;
+            left: 300px;
+            text-align: center;
+            font-family: monospace;
+            font-size: large;
+
+        }
+
+        #box3 {
+            width: 150px;
+            height: 20px;
+            border: 2px black solid;
+            position: absolute;
+            bottom: 1200px;
+            left: 500px;
+            text-align: center;
+            font-family: monospace;
+            font-size: large;
+
+        }
+
+        #box4 {
+            width: 150px;
+            height: 20px;
+            border: 2px black solid;
+            position: absolute;
+            bottom: 1400px;
+            left: 700px;
+            text-align: center;
+            font-family: monospace;
+            font-size: large;
+
+        }
+
+        #box5 {
+            width: 150px;
+            height: 20px;
+            border: 2px black solid;
+            position: absolute;
+            bottom: 1400px;
+            left: 900px;
+            text-align: center;
+            font-family: monospace;
+            font-size: large;
+            display: none;
+
+        }
+
+        #healthBorder {
+            width: 50px;
+            height: 600px;
+            background-color: rgb(16, 157, 223);
+            border: 5px solid black;
+            right: 0px;
+            position: absolute;
+            top: 50px;
+            right: 0px;
+            z-index: 2;
+
+        }
+
+        #health {
+            width: 50px;
+            height: 600px;
+            background-color: red;
+            border: 5px solid black;
+            position: absolute;
+            top: 50px;
+            z-index: 1;
+            right: 0px;
+        }
+
+        #reponse {
+            width: 150px;
+            height: 30px;
+            border: 5px black;
+            background-color: aqua;
+            position: absolute;
+            bottom: 50px;
+            left: 600px;
+            z-index: 3;
+
+
+        }
+
+        #answer {
+            color: black;
+            position: absolute;
+            bottom: 57px;
+            left: 520px;
+            z-index: 3;
+
+        }
+
+        #points {
+            z-index: 5;
+            height: 30px;
+            width: 30px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+
+
+
+
+
+
+<body>
+
+    <input type="text" id="reponse">
+
+
+
+    <div id="box1">box</div>
+    <div id="box2">box</div>
+    <div id="box3">box</div>
+    <div id="box4">box</div>
+    <div id="box5">box</div>
+    <div id="healthBorder"></div>
+    <div id="health"></div>
+    <div id="answer">Reponse:</div>
+
+
+
+
+    <script>
+        var number = 0;
+
+
+
+        var monArray = ["rouge", "orange", "jaune", "vert", "bleu pale", "bleu fonce", "mauve", "rose", "meuble", "portemanteau", "poubelle"]
+        var monArray2 = ["france", "espagne", "italie", "portugal", "angleterre", "rome", "chine", "japon", "maternelle", "plafond", "porte"]
+        var monArray3 = ["angle", "armoire", "banc", "bureau", "cabinet", "carreau", "chaise", "classe", "matelas", "peluche", "placard"]
+        var monArray4 = ["coin", "couloir", "dossier", "eau", "lavabo", "lecture", "lit", "marche", "mousse", "mur", "zebre"]
+        var monArray5 = ["coin5", "couloir5", "dossier5", "eau5", "lavabo5", "lecture5", "lit5", "marche5", "mousse5", "mur5", "zebre5"]
+
+
+        var boite1 = document.getElementById("box1")
+        var boite1Top = 0 //Distance de boite 1
+        var boite2 = document.getElementById("box2")
+        var boite2Top = 0 //Distance de boite 1
+        var boite3 = document.getElementById("box3")
+        var boite3Top = 0 //Distance de boite 1
+        var boite4 = document.getElementById("box4")
+        var boite4Top = 0 //Distance de boite 1
+        var boite5 = document.getElementById("box5")
+        var boite5Top = 0 //Distance de boite 1
+        var vitesse = 0.2
+
+
+        var BoxWord1 = Math.ceil(Math.random() * 11 - 1)
+        var BoxWord2 = Math.ceil(Math.random() * 11 - 1)
+        var BoxWord3 = Math.ceil(Math.random() * 11 - 1)
+        var BoxWord4 = Math.ceil(Math.random() * 11 - 1)
+        var BoxWord5 = Math.ceil(Math.random() * 11 - 1)
+        console.log(number)
+
+        function random1() {
+            BoxWord1 = Math.ceil(Math.random() * 11 - 1)
+
+        }
+        function random2() {
+
+            BoxWord2 = Math.ceil(Math.random() * 11 - 1)
+        }
+        function random3() {
+
+            BoxWord3 = Math.ceil(Math.random() * 11 - 1)
+        }
+        function random4() {
+
+            BoxWord4 = Math.ceil(Math.random() * 11 - 1)
+        }
+        function random5() {
+
+            BoxWord5 = Math.ceil(Math.random() * 11 - 1)
+        }
+
+
+        var Vie = 600;
+        function restart() {
+            document.getElementById("healthBorder").style.height = Vie + "px"
+        }
+
+        function giveValue() {
+            boite1.innerHTML = monArray[BoxWord1]
+            boite2.innerHTML = monArray2[BoxWord2]
+            boite3.innerHTML = monArray3[BoxWord3]
+            boite4.innerHTML = monArray4[BoxWord4]
+            boite5.innerHTML = monArray5[BoxWord5]
+        }
+
+        function dropBox1() {
+            giveValue()
+            boite1Top += vitesse
+            boite1.style.top = boite1Top + "px"
+
+            if (boite1Top > 650) {
+                boite1Top = 0
+                Vie -= 50;
+                restart()
+                reset1()
+            }
+        }
+        function dropBox2() {
+            giveValue()
+            boite2Top += vitesse
+            boite2.style.top = boite2Top + "px"
+            if (boite2Top > 650) {
+                boite2Top = 0
+                Vie -= 50;
+                restart()
+                reset2()
+
+
+            }
+        }
+        function dropBox3() {
+            giveValue()
+            boite3Top += vitesse
+            boite3.style.top = boite3Top + "px"
+            if (boite3Top > 650) {
+                boite3Top = 0
+                Vie -= 50;
+                restart()
+                reset3()
+
+
+            }
+        }
+        function dropBox4() {
+            giveValue()
+            boite4Top += vitesse
+            boite4.style.top = boite4Top + "px"
+            if (boite4Top > 650) {
+                boite4Top = 0
+                Vie -= 50;
+                restart()
+                reset4()
+
+
+            }
+        }
+        function dropBox5() {
+            giveValue()
+            boite5Top += vitesse
+            boite5.style.top = boite5Top + "px"
+            if (boite5Top > 650) {
+                boite5Top = 0
+                Vie -= 50;
+                restart()
+                reset5()
+                
+
+
+            }
+        }
+
+
+
+        setInterval(dropBox1, 22)
+        setInterval(dropBox2, 22)
+        setInterval(dropBox3, 22)
+        setInterval(dropBox4, 22)
+        setInterval(dropBox5, 22)
+
+        document.addEventListener("keydown", clavier)
+        function clavier(e) {    //if(e.keycode==13) {reponse=document.getElementById}
+            if (e.code == 'Enter') {
+                check()
+
+
+
+            }
+
+        }
+
+        for (i = 0; i < monArray.length; i++) {
+            console.log(monArray[i])
+        }
+        for (i = 0; i < monArray2.length; i++) {
+            console.log(monArray2[i])
+        }
+        for (i = 0; i < monArray3.length; i++) {
+            console.log(monArray3[i])
+        }
+        for (i = 0; i < monArray4.length; i++) {
+            console.log(monArray4[i])
+        }
+        for (i = 0; i < monArray5.length; i++) {
+            console.log(monArray5[i])
+        }
+
+        function clear() {
+            reponse.value = ''
+        }
+
+        function check() {
+
+            var Reponse = document.getElementById("reponse").value;
+            console.log(Reponse)
+            reponse.value = ''
+            for (i = 0; i < monArray.length; i++) {
+
+
+                if (Reponse == monArray[BoxWord1]) {
+
+                    reset1()
+                    number += 1
+                    console.log(number)
+                    vitesse += 0.05
+                    console.log(vitesse)
+
+                }
+                if (Reponse == monArray2[BoxWord2]) {
+                    reset2()
+                    number += 1
+                    console.log(number)
+                    vitesse += 0.05
+                    console.log(vitesse)
+
+                }
+                if (Reponse == monArray3[BoxWord3]) {
+                    reset3()
+                    number += 1
+                    console.log(number)
+                    vitesse += 0.05
+                    console.log(vitesse)
+                }
+                if (Reponse == monArray4[BoxWord4]) {
+
+                    reset4()
+                    number += 1
+                    console.log(number)
+                    vitesse += 0.05
+                    console.log(vitesse)
+                }
+                if (Reponse == monArray5[BoxWord5]) {
+
+                    reset5()
+                    number += 1
+                    console.log(number)
+                    vitesse += 0.05
+                    console.log(vitesse)
+                }
+                if (number == 5){
+                    boite5.style.top = 0 + "px"
+                    document.getElementById("box5").style.display = "block"
+                }
+
+            }
+        }
+
+        function reset1() {
+            boite1Top = 0
+            random1()
+
+            dropBox1()
+        }
+        function reset2() {
+            boite2Top = 0
+            random2()
+
+            dropBox2()
+        }
+        function reset3() {
+            boite3Top = 0
+            random3()
+
+            dropBox3()
+        }
+        function reset4() {
+            boite4Top = 0
+            random4()
+
+            dropBox4()
+        }
+        function reset5() {
+            boite5Top = 0
+            random5()
+
+            dropBox5()
+        }
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
