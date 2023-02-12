@@ -135,9 +135,16 @@
 </head>
 
 
+
+
+
+
+
 <body>
 
     <input type="text" id="reponse">
+
+
 
     <div id="box1">box</div>
     <div id="box2">box</div>
@@ -148,8 +155,14 @@
     <div id="health"></div>
     <div id="answer">Reponse:</div>
 
+
+
+
     <script>
         var number = 0;
+
+
+
         var monArray = ["rouge", "orange", "jaune", "vert", "bleu pale", "bleu fonce", "mauve", "rose", "meuble", "portemanteau", "poubelle"]
         var monArray2 = ["france", "espagne", "italie", "portugal", "angleterre", "rome", "chine", "japon", "maternelle", "plafond", "porte"]
         var monArray3 = ["angle", "armoire", "banc", "bureau", "cabinet", "carreau", "chaise", "classe", "matelas", "peluche", "placard"]
@@ -272,6 +285,9 @@
                 Vie -= 50;
                 restart()
                 reset5()
+                
+
+
             }
         }
 
@@ -287,7 +303,11 @@
         function clavier(e) {    //if(e.keycode==13) {reponse=document.getElementById}
             if (e.code == 'Enter') {
                 check()
+
+
+
             }
+
         }
 
         for (i = 0; i < monArray.length; i++) {
@@ -396,7 +416,22 @@
 
             dropBox5()
         }
+
+
+
+
+
+
+
+
+
+
     </script>
+
+
+
+
+
 
 </body>
 
