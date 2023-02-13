@@ -1,106 +1,12 @@
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-
-
     <style>
         body {
             background-image: url(Marin.jpg);
-        }
-
-        #box1 {
-            width: 150px;
-            height: 20px;
-            border: 2px black solid;
-            position: absolute;
-            bottom: 800px;
-            left: 100px;
-            text-align: center;
-            font-family: monospace;
-            font-size: large;
-
-        }
-
-        #box2 {
-            width: 150px;
-            height: 20px;
-            border: 2px black solid;
-            position: absolute;
-            bottom: 1000px;
-            left: 300px;
-            text-align: center;
-            font-family: monospace;
-            font-size: large;
-
-        }
-
-        #box3 {
-            width: 150px;
-            height: 20px;
-            border: 2px black solid;
-            position: absolute;
-            bottom: 1200px;
-            left: 500px;
-            text-align: center;
-            font-family: monospace;
-            font-size: large;
-
-        }
-
-        #box4 {
-            width: 150px;
-            height: 20px;
-            border: 2px black solid;
-            position: absolute;
-            bottom: 1400px;
-            left: 700px;
-            text-align: center;
-            font-family: monospace;
-            font-size: large;
-
-        }
-
-        #box5 {
-            width: 150px;
-            height: 20px;
-            border: 2px black solid;
-            position: absolute;
-            bottom: 1400px;
-            left: 900px;
-            text-align: center;
-            font-family: monospace;
-            font-size: large;
-            display: none;
-
-        }
-
-        #healthBorder {
-            width: 50px;
-            height: 600px;
-            background-color: rgb(16, 157, 223);
-            border: 5px solid black;
-            right: 0px;
-            position: absolute;
-            top: 50px;
-            right: 0px;
-            z-index: 2;
-
-        }
-
-        #health {
-            width: 50px;
-            height: 600px;
-            background-color: red;
-            border: 5px solid black;
-            position: absolute;
-            top: 50px;
-            z-index: 1;
-            right: 0px;
         }
 
         #reponse {
@@ -112,8 +18,6 @@
             bottom: 50px;
             left: 600px;
             z-index: 3;
-
-
         }
 
         #answer {
@@ -122,317 +26,258 @@
             bottom: 57px;
             left: 520px;
             z-index: 3;
-
         }
 
         #points {
             z-index: 5;
             height: 30px;
             width: 30px;
-            background-color: white;
+            background-color: transparent;
+            font-size: xx-large;
+            font-family: monospace;
+            position: absolute;
+            bottom: 50px;
+            right: 150px;
+        }
+
+        #defeat{
+            height: 200px;
+            width: 600px;
+            background-color: red;
+            color: aqua;
+            z-index: 100;
+            position: absolute;
+            top: 225px;
+            left: 300px;
+            text-align: center;
+            display: none;
+        }
+        #restart{
+            position: relative;
+            top: 150px;
+            left: 250px;
+            width: 100px;
+            height: 25px;
+            display: none;
         }
     </style>
 </head>
-
-
-
-
-
-
-
 <body>
-
     <input type="text" id="reponse">
-
-
-
-    <div id="box1">box</div>
-    <div id="box2">box</div>
-    <div id="box3">box</div>
-    <div id="box4">box</div>
-    <div id="box5">box</div>
     <div id="healthBorder"></div>
     <div id="health"></div>
     <div id="answer">Reponse:</div>
-
-
-
-
+    <div id="points"></div>
+    <div id="defeat"><input id="restart" type="button" value="Replay" onclick="initGame()">
+        <h2>Despite your constant effort, you didnt manage to
+            <br>
+            save the ocean from pollution. But remember, it is
+            <br>
+            not the end! Trying is a form of helping. Try again!
+        </h2>
+    </div>
     <script>
+        const BOX_NUMBER = 5
+        const WORD_NUMBER = 11
+        const HEALTH_DECREASE = 50
+        const DROPBOX_INTERVAL = 5
         var number = 0;
-
-
-
-        var monArray = ["rouge", "orange", "jaune", "vert", "bleu pale", "bleu fonce", "mauve", "rose", "meuble", "portemanteau", "poubelle"]
+        var monArray1 = ["rouge", "orange", "jaune", "vert", "bleu pale", "bleu fonce", "mauve", "rose", "meuble", "portemanteau", "poubelle"]
         var monArray2 = ["france", "espagne", "italie", "portugal", "angleterre", "rome", "chine", "japon", "maternelle", "plafond", "porte"]
         var monArray3 = ["angle", "armoire", "banc", "bureau", "cabinet", "carreau", "chaise", "classe", "matelas", "peluche", "placard"]
         var monArray4 = ["coin", "couloir", "dossier", "eau", "lavabo", "lecture", "lit", "marche", "mousse", "mur", "zebre"]
-        var monArray5 = ["coin5", "couloir5", "dossier5", "eau5", "lavabo5", "lecture5", "lit5", "marche5", "mousse5", "mur5", "zebre5"]
+        var monArray5 = ["rien", "aucun", "chaque", "fois", "bonjour", "nuit", "jour", "ciel", "soleil", "lune", "terre"]
+        var monArray = [monArray1, monArray2, monArray3, monArray4, monArray5]
 
+        var boxArray = new Array()
+        var boxHandlerArray = new Array()
+        var boxIDArray = ["box1", "box2", "box3", "box4", "box5"]
+        var boxWordArray = ["", "", "", "", ""]
+        var boxTopArray = [0, 0, 0, 0, 0]
+        var boxVitesseArray = [0.5, 0.45, 0.4, 0.35, 0.3]
+        var body = document.querySelector("body")
 
-        var boite1 = document.getElementById("box1")
-        var boite1Top = 0 //Distance de boite 1
-        var boite2 = document.getElementById("box2")
-        var boite2Top = 0 //Distance de boite 1
-        var boite3 = document.getElementById("box3")
-        var boite3Top = 0 //Distance de boite 1
-        var boite4 = document.getElementById("box4")
-        var boite4Top = 0 //Distance de boite 1
-        var boite5 = document.getElementById("box5")
-        var boite5Top = 0 //Distance de boite 1
-        var vitesse = 0.2
-
-
-        var BoxWord1 = Math.ceil(Math.random() * 11 - 1)
-        var BoxWord2 = Math.ceil(Math.random() * 11 - 1)
-        var BoxWord3 = Math.ceil(Math.random() * 11 - 1)
-        var BoxWord4 = Math.ceil(Math.random() * 11 - 1)
-        var BoxWord5 = Math.ceil(Math.random() * 11 - 1)
-        console.log(number)
-
-        function random1() {
-            BoxWord1 = Math.ceil(Math.random() * 11 - 1)
-
-        }
-        function random2() {
-
-            BoxWord2 = Math.ceil(Math.random() * 11 - 1)
-        }
-        function random3() {
-
-            BoxWord3 = Math.ceil(Math.random() * 11 - 1)
-        }
-        function random4() {
-
-            BoxWord4 = Math.ceil(Math.random() * 11 - 1)
-        }
-        function random5() {
-
-            BoxWord5 = Math.ceil(Math.random() * 11 - 1)
-        }
-
-
+        var healthBar = document.getElementById("healthBorder")
+        var health = document.getElementById("health")
+        var point = document.getElementById("points")
+        var reponse = document.getElementById("reponse")
+        var monSon = new Audio();
+        var monSon2 = new Audio();
+        var monSonFail = new Audio();
         var Vie = 600;
-        function restart() {
-            document.getElementById("healthBorder").style.height = Vie + "px"
+
+        // Game entry point, other component must be initialized before initGame()
+        initHealthBar()
+        initBoxes()
+        initAudio()
+        initButtons()
+        initGame()
+
+        function setBoxStyle(box, bottom, left){
+            console.log("setBoxStyle")
+            box.style.width = "150px"
+            box.style.height = "20px";
+            box.style.border = "2px black solid";
+            box.style.position = "absolute";
+            box.style.bottom = bottom + "px";
+            box.style.left = left + "px";
+            box.style.textAlign = "center";
+            box.style.fontFamily = "monospace";
+            box.style.fontSize = "large";
         }
 
-        function giveValue() {
-            boite1.innerHTML = monArray[BoxWord1]
-            boite2.innerHTML = monArray2[BoxWord2]
-            boite3.innerHTML = monArray3[BoxWord3]
-            boite4.innerHTML = monArray4[BoxWord4]
-            boite5.innerHTML = monArray5[BoxWord5]
+        function setBarStyle(bar, width, height, border, position, top, bottom, left, right, zIndex, fontSize, bkColor){
+            console.log("setBarStyle")
+            bar.style.width = width + 'px'
+            bar.style.height = height + "px";
+            bar.style.border = border + "px black solid";
+            bar.style.position = position;
+            bar.style.top = top;
+            bar.style.bottom = bottom;
+            bar.style.left = left
+            bar.style.right = right
+            bar.style.textAlign = "center";
+            bar.style.fontFamily = "monospace";
+            bar.style.fontSize = fontSize;
+            bar.style.zIndex = zIndex;
+            bar.style.backgroundColor = bkColor;
         }
 
-        function dropBox1() {
-            giveValue()
-            boite1Top += vitesse
-            boite1.style.top = boite1Top + "px"
+        function initGame(){
+            Vie = 600; number = 0
+            setHealthBar(0)
+            for(i=0; i< BOX_NUMBER; i++){
+                resetBox(i)
+                boxArray[i].style.display = "block"
+            }
+            boxArray[4].style.display = "none"
+            document.getElementById("defeat").style.display="none"
+            document.getElementById("restart").style.display="none"
+            setInterval(() => { monSon2.play()}, 0);
+            boxHandlerArray.push(setInterval(dropBox0, DROPBOX_INTERVAL))
+            boxHandlerArray.push(setInterval(dropBox1, DROPBOX_INTERVAL))
+            boxHandlerArray.push(setInterval(dropBox2, DROPBOX_INTERVAL))
+            boxHandlerArray.push(setInterval(dropBox3, DROPBOX_INTERVAL))
+        }
 
-            if (boite1Top > 650) {
-                boite1Top = 0
-                Vie -= 50;
-                restart()
-                reset1()
+        function initHealthBar(){
+            setBarStyle(healthBar, 150, 600, 5, "absolute", "50px", "static", "static", "0px", 2, "large", 'rgb(' + 16 + ',' + 158 + ',' + 223 + ')')
+            setBarStyle(health, 150, 600, 5, "absolute", "50px", "static", "static", "0px", 1, "large", "red")
+            document.addEventListener("keydown", function(e){if (e.code == 'Enter') check()})
+            point.innerHTML = "Point:" + number
+        }
+
+        function initAudio(){
+            monSon.src = "bip.wav";
+            monSon2.src = "bg.wav";
+            monSonFail.src = "fail.wav";
+            monSon2.volume = 0.5;
+            monSonFail.volume = 0.2;
+        }
+
+        function initBoxes(){
+            for (i = 0; i < BOX_NUMBER; i++) {
+                var temp
+                temp = document.createElement('div')
+                temp.setAttribute("id", boxIDArray[i])
+                body.appendChild(temp)
+                boxArray.push(temp)
+                setBoxStyle(boxArray[i], 800+i*200, 100+i*200)
             }
         }
-        function dropBox2() {
-            giveValue()
-            boite2Top += vitesse
-            boite2.style.top = boite2Top + "px"
-            if (boite2Top > 650) {
-                boite2Top = 0
-                Vie -= 50;
-                restart()
-                reset2()
 
-
-            }
+        function initButtons(){
+            // TODO
         }
-        function dropBox3() {
-            giveValue()
-            boite3Top += vitesse
-            boite3.style.top = boite3Top + "px"
-            if (boite3Top > 650) {
-                boite3Top = 0
-                Vie -= 50;
-                restart()
-                reset3()
 
-
-            }
+        function resetBox(boxIndex){
+            console.log("boxIndex:" + boxIndex )
+            var tempArray = monArray[boxIndex]
+            boxWordArray[boxIndex] = tempArray[Math.ceil(Math.random() * WORD_NUMBER - 1)]
+            boxArray[boxIndex].innerHTML = boxWordArray[boxIndex]
+            boxTopArray[boxIndex] = 0
         }
-        function dropBox4() {
-            giveValue()
-            boite4Top += vitesse
-            boite4.style.top = boite4Top + "px"
-            if (boite4Top > 650) {
-                boite4Top = 0
-                Vie -= 50;
-                restart()
-                reset4()
 
-
-            }
-        }
-        function dropBox5() {
-            giveValue()
-            boite5Top += vitesse
-            boite5.style.top = boite5Top + "px"
-            if (boite5Top > 650) {
-                boite5Top = 0
-                Vie -= 50;
-                restart()
-                reset5()
-                
-
-
+        function dropBox0(){
+            boxTopArray[0] += boxVitesseArray[0]
+            boxArray[0].style.top = boxTopArray[0] + "px"
+            if(boxTopArray[0] > 650) {
+                resetBox(0)
+                setHealthBar(HEALTH_DECREASE)
             }
         }
 
-
-
-        setInterval(dropBox1, 22)
-        setInterval(dropBox2, 22)
-        setInterval(dropBox3, 22)
-        setInterval(dropBox4, 22)
-        setInterval(dropBox5, 22)
-
-        document.addEventListener("keydown", clavier)
-        function clavier(e) {    //if(e.keycode==13) {reponse=document.getElementById}
-            if (e.code == 'Enter') {
-                check()
-
-
-
+        function dropBox1(){
+            boxTopArray[1] += boxVitesseArray[1]
+            boxArray[1].style.top = boxTopArray[1] + "px"
+            if(boxTopArray[1] > 650) {
+                resetBox(1)
+                setHealthBar(HEALTH_DECREASE)
             }
-
         }
 
-        for (i = 0; i < monArray.length; i++) {
-            console.log(monArray[i])
-        }
-        for (i = 0; i < monArray2.length; i++) {
-            console.log(monArray2[i])
-        }
-        for (i = 0; i < monArray3.length; i++) {
-            console.log(monArray3[i])
-        }
-        for (i = 0; i < monArray4.length; i++) {
-            console.log(monArray4[i])
-        }
-        for (i = 0; i < monArray5.length; i++) {
-            console.log(monArray5[i])
+        function dropBox2(){
+            boxTopArray[2] += boxVitesseArray[2]
+            boxArray[2].style.top = boxTopArray[2] + "px"
+            if(boxTopArray[2] > 650) {
+                resetBox(2)
+                setHealthBar(HEALTH_DECREASE)
+            }
         }
 
-        function clear() {
-            reponse.value = ''
+        function dropBox3(){
+            boxTopArray[3] += boxVitesseArray[3]
+            boxArray[3].style.top = boxTopArray[3] + "px"
+            if(boxTopArray[3] > 650) {
+                resetBox(3)
+                setHealthBar(HEALTH_DECREASE)
+            }
+        }
+
+        function dropBox4(){
+            boxTopArray[4] += boxVitesseArray[4]
+            boxArray[4].style.top = boxTopArray[4] + "px"
+            if(boxTopArray[4] > 650) {
+                resetBox(4)
+                setHealthBar(HEALTH_DECREASE)
+            }
+        }
+
+        function setHealthBar(value){
+            Vie -= value
+            healthBar.style.height = Vie + "px"
+            if (Vie <= 0) lose()
+        }
+
+        function lose(){
+            for(i=0; i<boxHandlerArray.length; i++) {
+                boxArray[i].style.display = "none"
+                clearInterval(boxHandlerArray.pop())
+            }
+            clearInterval = []
+            monSonFail.play()
+            document.getElementById("defeat").style.display="block"
+            document.getElementById("restart").style.display="block"
         }
 
         function check() {
-
-            var Reponse = document.getElementById("reponse").value;
-            console.log(Reponse)
-            reponse.value = ''
+            monSon.play()
             for (i = 0; i < monArray.length; i++) {
-
-
-                if (Reponse == monArray[BoxWord1]) {
-
-                    reset1()
-                    number += 1
-                    console.log(number)
-                    vitesse += 0.05
-                    console.log(vitesse)
-
+                if(monArray[i].includes(reponse.value)){
+                    resetBox(i)
+                    number++
+                    boxVitesseArray[i] += 0.05
                 }
-                if (Reponse == monArray2[BoxWord2]) {
-                    reset2()
-                    number += 1
-                    console.log(number)
-                    vitesse += 0.05
-                    console.log(vitesse)
-
+                if (number == 5 && boxHandlerArray.length < 5) {
+                    boxArray[4].style.display = "block"
+                    resetBox(4)
+                    boxHandlerArray.push(setInterval(dropBox4, DROPBOX_INTERVAL))
                 }
-                if (Reponse == monArray3[BoxWord3]) {
-                    reset3()
-                    number += 1
-                    console.log(number)
-                    vitesse += 0.05
-                    console.log(vitesse)
-                }
-                if (Reponse == monArray4[BoxWord4]) {
-
-                    reset4()
-                    number += 1
-                    console.log(number)
-                    vitesse += 0.05
-                    console.log(vitesse)
-                }
-                if (Reponse == monArray5[BoxWord5]) {
-
-                    reset5()
-                    number += 1
-                    console.log(number)
-                    vitesse += 0.05
-                    console.log(vitesse)
-                }
-                if (number == 5){
-                    boite5.style.top = 0 + "px"
-                    document.getElementById("box5").style.display = "block"
-                }
-
+                point.innerHTML = "Point:" + number
             }
+            reponse.value = ''
         }
-
-        function reset1() {
-            boite1Top = 0
-            random1()
-
-            dropBox1()
-        }
-        function reset2() {
-            boite2Top = 0
-            random2()
-
-            dropBox2()
-        }
-        function reset3() {
-            boite3Top = 0
-            random3()
-
-            dropBox3()
-        }
-        function reset4() {
-            boite4Top = 0
-            random4()
-
-            dropBox4()
-        }
-        function reset5() {
-            boite5Top = 0
-            random5()
-
-            dropBox5()
-        }
-
-
-
-
-
-
-
-
-
 
     </script>
-
-
-
-
-
-
 </body>
-
 </html>
