@@ -4,63 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            background-image: url(Marin.jpg);
-        }
-
-        #reponse {
-            width: 150px;
-            height: 30px;
-            border: 5px black;
-            background-color: aqua;
-            position: absolute;
-            bottom: 50px;
-            left: 600px;
-            z-index: 3;
-        }
-
-        #answer {
-            color: black;
-            position: absolute;
-            bottom: 57px;
-            left: 520px;
-            z-index: 3;
-        }
-
-        #points {
-            z-index: 5;
-            height: 30px;
-            width: 30px;
-            background-color: transparent;
-            font-size: xx-large;
-            font-family: monospace;
-            position: absolute;
-            bottom: 50px;
-            right: 150px;
-        }
-
-        #defeat{
-            height: 200px;
-            width: 600px;
-            background-color: red;
-            color: aqua;
-            z-index: 100;
-            position: absolute;
-            top: 225px;
-            left: 300px;
-            text-align: center;
-            display: none;
-        }
-        #restart{
-            position: relative;
-            top: 150px;
-            left: 250px;
-            width: 100px;
-            height: 25px;
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <input type="text" id="reponse">
@@ -110,21 +54,7 @@
         initHealthBar()
         initBoxes()
         initAudio()
-        initButtons()
         initGame()
-
-        function setBoxStyle(box, bottom, left){
-            console.log("setBoxStyle")
-            box.style.width = "150px"
-            box.style.height = "20px";
-            box.style.border = "2px black solid";
-            box.style.position = "absolute";
-            box.style.bottom = bottom + "px";
-            box.style.left = left + "px";
-            box.style.textAlign = "center";
-            box.style.fontFamily = "monospace";
-            box.style.fontSize = "large";
-        }
 
         function setBarStyle(bar, width, height, border, position, top, bottom, left, right, zIndex, fontSize, bkColor){
             console.log("setBarStyle")
@@ -154,10 +84,9 @@
             document.getElementById("defeat").style.display="none"
             document.getElementById("restart").style.display="none"
             setInterval(() => { monSon2.play()}, 0);
-            boxHandlerArray.push(setInterval(dropBox0, DROPBOX_INTERVAL))
-            boxHandlerArray.push(setInterval(dropBox1, DROPBOX_INTERVAL))
-            boxHandlerArray.push(setInterval(dropBox2, DROPBOX_INTERVAL))
-            boxHandlerArray.push(setInterval(dropBox3, DROPBOX_INTERVAL))
+            for(i=0; i<BOX_NUMBER-1; i++){
+                boxHandlerArray.push(setInterval(dropBox(i), DROPBOX_INTERVAL))
+            }
         }
 
         function initHealthBar(){
@@ -182,14 +111,10 @@
                 temp.setAttribute("id", boxIDArray[i])
                 body.appendChild(temp)
                 boxArray.push(temp)
-                setBoxStyle(boxArray[i], 800+i*200, 100+i*200)
+                setBarStyle(boxArray[i], 150, 20, 2, "absolute", "static", 800+i*200+"px", 100+i*200+"px", "static", 2, "large", "transparent")
             }
         }
-
-        function initButtons(){
-            // TODO
-        }
-
+        
         function resetBox(boxIndex){
             console.log("boxIndex:" + boxIndex )
             var tempArray = monArray[boxIndex]
@@ -198,48 +123,14 @@
             boxTopArray[boxIndex] = 0
         }
 
-        function dropBox0(){
-            boxTopArray[0] += boxVitesseArray[0]
-            boxArray[0].style.top = boxTopArray[0] + "px"
-            if(boxTopArray[0] > 650) {
-                resetBox(0)
-                setHealthBar(HEALTH_DECREASE)
-            }
-        }
-
-        function dropBox1(){
-            boxTopArray[1] += boxVitesseArray[1]
-            boxArray[1].style.top = boxTopArray[1] + "px"
-            if(boxTopArray[1] > 650) {
-                resetBox(1)
-                setHealthBar(HEALTH_DECREASE)
-            }
-        }
-
-        function dropBox2(){
-            boxTopArray[2] += boxVitesseArray[2]
-            boxArray[2].style.top = boxTopArray[2] + "px"
-            if(boxTopArray[2] > 650) {
-                resetBox(2)
-                setHealthBar(HEALTH_DECREASE)
-            }
-        }
-
-        function dropBox3(){
-            boxTopArray[3] += boxVitesseArray[3]
-            boxArray[3].style.top = boxTopArray[3] + "px"
-            if(boxTopArray[3] > 650) {
-                resetBox(3)
-                setHealthBar(HEALTH_DECREASE)
-            }
-        }
-
-        function dropBox4(){
-            boxTopArray[4] += boxVitesseArray[4]
-            boxArray[4].style.top = boxTopArray[4] + "px"
-            if(boxTopArray[4] > 650) {
-                resetBox(4)
-                setHealthBar(HEALTH_DECREASE)
+        function dropBox(boxIndex){
+            return function(){
+                boxTopArray[boxIndex] += boxVitesseArray[boxIndex]
+                boxArray[boxIndex].style.top = boxTopArray[boxIndex] + "px"
+                if(boxTopArray[boxIndex] > 650) {
+                    resetBox(boxIndex)
+                    setHealthBar(HEALTH_DECREASE)
+                }
             }
         }
 
@@ -271,13 +162,12 @@
                 if (number == 5 && boxHandlerArray.length < 5) {
                     boxArray[4].style.display = "block"
                     resetBox(4)
-                    boxHandlerArray.push(setInterval(dropBox4, DROPBOX_INTERVAL))
+                    boxHandlerArray.push(setInterval(dropBox(4), DROPBOX_INTERVAL))
                 }
                 point.innerHTML = "Point:" + number
             }
             reponse.value = ''
         }
-
     </script>
 </body>
 </html>
