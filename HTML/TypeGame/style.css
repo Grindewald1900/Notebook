@@ -1,0 +1,55 @@
+body {
+    background-image: url(Marin.jpg);
+}
+
+#reponse {
+    width: 150px;
+    height: 30px;
+    border: 5px black;
+    background-color: aqua;
+    position: absolute;
+    bottom: 50px;
+    left: 600px;
+    z-index: 3;
+}
+
+#answer {
+    color: black;
+    position: absolute;
+    bottom: 57px;
+    left: 520px;
+    z-index: 3;
+}
+
+#points {
+    z-index: 5;
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    font-size: xx-large;
+    font-family: monospace;
+    position: absolute;
+    bottom: 50px;
+    right: 150px;
+}
+
+#defeat{
+    height: 200px;
+    width: 600px;
+    background-color: red;
+    color: aqua;
+    z-index: 100;
+    position: absolute;
+    top: 225px;
+    left: 300px;
+    text-align: center;
+    display: none;
+}
+#restart{
+    position: relative;
+    top: 150px;
+    left: 250px;
+    width: 100px;
+    height: 25px;
+    display: none;
+}
